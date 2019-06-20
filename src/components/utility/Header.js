@@ -6,7 +6,7 @@ export default class Header extends Component {
         return (
             <div>
                 <header className='text-center bg-success'>
-                        <h1>ggPulley's Pristine Clean</h1>
+                        <h1>Pulley's Pristine Clean</h1>
                 </header>
             </div>
         )
