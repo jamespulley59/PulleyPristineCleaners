@@ -4,13 +4,13 @@ import './App.css';
 import Axios from 'axios';
 import ContactUs from "./components/user/ContactUs";
 import Header from './components/utility/Header';
-import Navbar from './components/utility/Navbar';
+import Footer from './components/utility/Footer'
 
 function App() {
   return (
    <Router>
-     <Header />
-     <Navbar />
+     <Header />     
+     <Footer />
      <Route exact path="/contact" component={ContactUs} />   
     </Router>
   );
