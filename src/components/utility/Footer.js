@@ -5,7 +5,7 @@ export default class Footer extends Component {
     
 
     render() {
-        const {uid}= this.props
+        //const {uid}= this.props
         return (
             <div>
                 {/* <nav className="navbar navbar-dark bg-success fixed-bottom"> */}
