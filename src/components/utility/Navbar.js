@@ -10,8 +10,8 @@ export default class Navbar extends Component {
              <Link to = "../user/Home"></Link>
              <Link to = "../user/ScheduleServices"></Link>
              <Link to = "../user/Comment"></Link>
-            }
+           
             </nav>
         )
     }
-}
+        }
