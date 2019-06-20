@@ -6,7 +6,7 @@ export default class Footer extends Component {
     render() {
         return (
             <div>
-                <Link className='btn btn block' to='/ContactUs'>Contact Us
+                <Link className='btn btn block' to="/contact">Contact Us
                 </Link>                
             </div>
         )
