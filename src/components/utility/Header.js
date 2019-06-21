@@ -5,8 +5,8 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-                <header className='text-center bg-success'>
-                        <h1>1Pulley's Pristine Clean</h1>
+                <header className='text-center '>
+                        <h1>Pulley's Pristine Clean</h1>
                 </header>
             </div>
         )
