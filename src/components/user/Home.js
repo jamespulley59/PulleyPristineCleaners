@@ -30,36 +30,43 @@ return (
 
             <section>
                 <div class="row">
+  {/* <div class="column"></div>
   <div class="column"></div>
   <div class="column"></div>
-  <div class="column"></div>
-</div>
+</div> */}
 
                 <div className='text-center'>
-                    <div className='col-lg-4 d-none d-lg-block'>
-                        <h3>Residential Services</h3>
-                            <p> Our goal is to make you smile when you get home
-                            Home to your clean safe haven.
-                            You have enough on your plate; 
-                            family, work, leisure activities.
-                            Pulleys Pristine Clean allows you to live your life.
-                            Knowing you are not coming home to another job (cleaning).
-                            You're coming home to relax in comfort and able to contemplate what is important; your real life. 
-                            Allow us to take care of the small yet time consuming detail of keeping your home showcase clean 
-                            (mission statemnet in italics) 
-                            Click on Contact Us at the bottom of this page now and begin enjoying a more relaxed lifestyle.
-                            </p>  
+                     <div className='column'>
+                        <div className='col-lg-4 d-none d-lg-block'>
+                            <h3>Residential Services</h3>
+                                <p> Our goal is to make you smile when you get home
+                                Home to your clean safe haven.
+                                You have enough on your plate; 
+                                family, work, leisure activities.
+                                Pulleys Pristine Clean allows you to live your life.
+                                Knowing you are not coming home to another job (cleaning).
+                                You're coming home to relax in comfort and able to contemplate what is important; your real life. 
+                                Allow us to take care of the small yet time consuming detail of keeping your home showcase clean 
+                                (mission statemnet in italics) 
+                                Click on Contact Us at the bottom of this page now and begin enjoying a more relaxed lifestyle.
+                                </p>  
+                        </div>
                     </div>
 
-                    <div className='col-lg-4 d-none d-lg-block'>
-                        <img className='homeimg' src={pic1} alt="" />
+                    <div classname='column'>
+                        <div className='col-lg-4 d-none d-lg-block'>
+                            <img className='homeimg' src={pic1} alt="" />
+                        </div>
                     </div>
-
-                    <div className='col-lg-4 d-none d-lg-block'>
-                        <h3>Commercial Services</h3>
-                            <p>We'll clean the shit out of your office                    
-                            </p>
+                    
+                    <div classname='column'> 
+                         <div className='col-lg-4 d-none d-lg-block'>
+                             <h3>Commercial Services</h3>
+                                <p>We'll clean the shit out of your office                    
+                                </p>
+                        </div>
                     </div>         
+                </div>
                 </div>
             </section> 
            
