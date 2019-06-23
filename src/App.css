@@ -28,3 +28,14 @@ a {
   height: 77vh;
 } 
 
+.column {
+  float: left;
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}

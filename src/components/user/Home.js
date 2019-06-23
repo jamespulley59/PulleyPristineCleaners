@@ -18,9 +18,9 @@ return (
         <Header />
             <div>
                 <nav className="navbar navbar-dark  ">
-                    <h2>Home Page</h2>          
+                    {/* <h2>Home Page</h2>           */}
                         <Link to = {`/LoginProfile${LoginProfile}`}>Login</Link>
-                        <Link to = {`/ScheduleServices${ScheduleServices}`}>Review or Schedule Service(s)</Link>
+                        <Link to = {`/ScheduleServices${ScheduleServices}`}>See or Schedule Service(s)</Link>
                         <Link to = {`/BeforeAndAfter${BeforeAndAfter}`}>Before and After Photos</Link>
                         <Link to = {`/GiftCertificates${GiftCertificates}`}>Gift Certificates Available</Link>  
                         <Link to = {`/Comments${Comments}`}>Comments?</Link>
@@ -28,19 +28,34 @@ return (
                 </nav>
             </div>
 
-            <section className='pos'>
+            <section>
+                <div class="row">
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+</div>
+
                 <div className='text-center'>
-                    <div className='pos1'>
+                    <div className='col-lg-4 d-none d-lg-block'>
                         <h3>Residential Services</h3>
-                            <p classname='residential'>Our goal is to make you smile when you get home. Home to your clean safe haven. You have enough on your plate; family, work, leisure activities. Pulley's Pristine Clean allows you to live your life knowing you're coming home. Not coming home to another job (cleaning), but coming to relax in comfort and contemplate what's important; your real life. Allow us to take care of the small, yet time consuming, detail of keeping your home showcase clean. (mission statemnet in italics?) Click on Contact Us at the bottom of this page today and begin enjoying a more relaxed lifestyle.  
-                            </p>
+                            <p> Our goal is to make you smile when you get home
+                            Home to your clean safe haven.
+                            You have enough on your plate; 
+                            family, work, leisure activities.
+                            Pulleys Pristine Clean allows you to live your life.
+                            Knowing you are not coming home to another job (cleaning).
+                            You're coming home to relax in comfort and able to contemplate what is important; your real life. 
+                            Allow us to take care of the small yet time consuming detail of keeping your home showcase clean 
+                            (mission statemnet in italics) 
+                            Click on Contact Us at the bottom of this page now and begin enjoying a more relaxed lifestyle.
+                            </p>  
                     </div>
 
-                    <div className='pos2'>
+                    <div className='col-lg-4 d-none d-lg-block'>
                         <img className='homeimg' src={pic1} alt="" />
                     </div>
 
-                    <div className='pos3'>
+                    <div className='col-lg-4 d-none d-lg-block'>
                         <h3>Commercial Services</h3>
                             <p>We'll clean the shit out of your office                    
                             </p>
