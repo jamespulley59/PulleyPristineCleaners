@@ -6,9 +6,6 @@ import Home from "./components/user/Home";
 import BeforeAndAfter from "./components/user/BeforeAndAfter";
 import Comments from "./components/user/Comments";
 import ContactUs from "./components/user/ContactUs";
-
-import Header from './components/utility/Header';
-import Footer from './components/utility/Footer'
 import GiftCertificates from "./components/user/GiftCertificates";
 import LoginProfile from "./components/user/LoginProfile";
 import ScheduleServices from "./components/user/ScheduleServices";
@@ -17,11 +14,9 @@ import AdminCalendar from "./components/administrator/AdminCalendar";
 
 
 
-
 function App() {
   return (
    <Router>
-
      
     <Route exact path='/' component={Home} />
     <Route exact path='/Home' component={Home} /> 
