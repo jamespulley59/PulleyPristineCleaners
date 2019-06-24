@@ -36,6 +36,31 @@ a {
   width: 25%;
 }
 
+<<<<<<< HEAD
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px
+ 
+}
+
+.busy{
+  text-align: center;
+}
+
+.gift {
+  margin-top: 30px;
+}
+
+
+.form-group2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+=======
 .middle {
   width: 50%;
 }
+>>>>>>> c12f1c78448917cf406e23595aa8efec0eaf1f83
