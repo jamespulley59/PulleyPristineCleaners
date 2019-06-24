@@ -5,11 +5,13 @@ import './App.css';
 import ContactUs from "./components/user/ContactUs";
 import Header from './components/utility/Header';
 import Footer from './components/utility/Footer'
+import GiftCertificates from "./components/user/GiftCertificates"
 
 function App() {
   return (
    <Router>
-     <Header />     
+     <Header />
+     <GiftCertificates />
      <Footer />
      <Route exact path="/contact" component={ContactUs} />   
     </Router>

@@ -31,3 +31,15 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px
+ 
+}
+
+.busy{
+  text-align: center;
+}
