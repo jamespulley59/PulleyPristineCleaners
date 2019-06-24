@@ -21,7 +21,7 @@ return (
             <nav className="navbar navbar-dark  ">
                 
                     <Link to ='/LoginProfile'>Login</Link>
-                    <Link to ='/LoginProfile' >See or Schedule Service(s)</Link>
+                    <Link to ='/ScheduleServices' >See or Schedule Service(s)</Link>
                     <Link to = '/BeforeAndAfter'>Before and After Photos</Link>
                     <Link to = '/GiftCertificates'>Gift Certificates Available</Link>  
                     <Link to ='/Comments'>Comments?</Link>
