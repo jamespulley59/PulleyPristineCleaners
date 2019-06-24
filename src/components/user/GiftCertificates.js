@@ -65,7 +65,7 @@ export default class GiftCertificates extends Component {
                 </form>
               </div>
             </section>
-            <img className="off" src={off} />
+            <img className="off" src={off} alt=""/>
           </div>
 
           <div className="col-lg-6">
@@ -106,7 +106,7 @@ export default class GiftCertificates extends Component {
                 </form>
               </div>
             </section>
-            <img className= "gift" src={giftCert} />
+            <img className= "gift" src={giftCert}alt=""  />
           </div>
           
         </div>
