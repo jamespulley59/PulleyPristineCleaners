@@ -17,9 +17,9 @@ import AdminCalendar from "./components/administrator/AdminCalendar";
 function App() {
   return (
    <Router>
-
+     
     <Route exact path='/' component={Home} />
-    {/* <Route exact path='/Home' component={Home} /> */}
+    <Route exact path='/Home' component={Home} /> 
     <Route exact path="/BeforeAndAfter" component={BeforeAndAfter} />
     <Route exact path="/Comments" component={Comments} />
     <Route exact path="/ContactUs" component={ContactUs} />  
