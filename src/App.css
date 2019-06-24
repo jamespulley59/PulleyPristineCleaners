@@ -3,8 +3,8 @@
 /* color for all header */
 Header {
   background-color: rgb(191, 195, 221);
-  padding-bottom: 20px;
- 
+  /* padding-top: 20px; */
+  padding-bottom: 20px; 
   font-size: 80px;
 }
 Footer {
@@ -14,7 +14,7 @@ Footer {
 
 body {
   background-color: rgb(191, 195, 221);
-  padding-top:70px;
+  /* padding-top:70px; */
   padding-bottom: 70px;
 } 
 
@@ -35,8 +35,8 @@ a {
 /* Home page */
 
 .homeimg {
-  /* height: 70vh;
-  width: 80vh; */
+  height: 50vh;
+  width: 50vh;
   margin-right: 10px;
 } 
 
