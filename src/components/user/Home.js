@@ -19,12 +19,12 @@ return (
         <div>
             <nav className="navbar navbar-dark  ">
                 
-                    <Link to = {`/LoginProfile${LoginProfile}`}>Login</Link>
-                    <Link to = {`/ScheduleServices${ScheduleServices}`}>See or Schedule Service(s)</Link>
-                    <Link to = {`/BeforeAndAfter${BeforeAndAfter}`}>Before and After Photos</Link>
-                    <Link to = {`/GiftCertificates${GiftCertificates}`}>Gift Certificates Available</Link>  
-                    <Link to = {`/Comments${Comments}`}>Comments?</Link>
-                    {/* <Link to = {`/${Home}`}>Home Page</Link> */}
+            <Link to ='/LoginProfile'>Login</Link>
+                    <Link to ='/ScheduleServices' >See or Schedule Service(s)</Link>
+                    <Link to = '/BeforeAndAfter'>Before and After Photos</Link>
+                    <Link to = '/GiftCertificates'>Gift Certificates Available</Link>  
+                    <Link to ='/Comments'>Comments?</Link>
+                    {/* <Link to = 'home'>Home Page</Link> */}
             </nav>
         </div>
 
