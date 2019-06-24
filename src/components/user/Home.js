@@ -18,7 +18,7 @@ return (
     <Header />
         <div>
             <nav className="navbar navbar-dark  ">
-                {/* <h2>Home Page</h2>           */}
+                
                     <Link to = {`/LoginProfile${LoginProfile}`}>Login</Link>
                     <Link to = {`/ScheduleServices${ScheduleServices}`}>See or Schedule Service(s)</Link>
                     <Link to = {`/BeforeAndAfter${BeforeAndAfter}`}>Before and After Photos</Link>
