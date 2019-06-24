@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
+export default class Footer extends Component {    
 
-export default class Footer extends Component {
-    render() {
-        return (
-            <div>
-                <Link className='btn btn block' to='/ContactUs'>Contact Us
-                </Link>                
-            </div>
-        )
+render() {
+    //const {uid}= this.props
+    return (
+        <div className='footer'>                
+            <Link className='btn btn-block' to="/contact">
+                <h2 className='text-center' >Contact Us</h2>
+            </Link>               
+        </div>
+    )
     }
 }
