@@ -3,9 +3,9 @@ import { link } from "react-router-dom";
 import Header from "../utility/Header";
 //import {navbar} from './utility/Navbar';
 import Footer from "../utility/Footer";
-//import {css} from '../src/App.css';
-import {giftCert} from "../img/giftCert.jpg";
-import {off} from "../img/10 Off.png"
+//import {css} from './src/App.css';
+import giftCert from "../img/giftCert.jpg";
+import off from "../img/discount.png"
 
 export default class GiftCertificates extends Component {
   render() {

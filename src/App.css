@@ -1,35 +1,47 @@
 /* utilities */
 
 /* color for all header */
-header {
-  background-color: rgb(136, 197, 136);
+Header {
+  background-color: rgb(191, 195, 221);
+  /* padding-top: 20px; */
+  padding-bottom: 20px; 
+  font-size: 80px;
 }
 Footer {
-  background-color: rgb(136, 197, 136);
+  background-color: rgb(191, 195, 221);
+ 
 } 
 
 body {
-  background-color: rgb(136, 197, 136);
+  background-color: rgb(191, 195, 221);
+  /* padding-top:70px; */
+  padding-bottom: 70px;
 } 
 
 a {
-  background-color: rgb(189, 224, 189);
+  background-color: rgb(216, 218, 224);
   color: black;
-  border: 2px solid green;
+  border: 2px solid rgb(239, 240, 241);
   padding: 10px 20px; 
   text-align: center;
   text-decoration: none;
   display: inline-block;
 }
 
+.row {
+  margin:10px 10px;
+}
+
 /* Home page */
 
 .homeimg {
-  height: 77vh;
+  height: 50vh;
+  width: 50vh;
+  margin-right: 10px;
 } 
 
-.column {
-  float: left;
+.row {
+  padding-top: 60px;
 }
 
 .left, .right {
