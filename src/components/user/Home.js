@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import Header from '../utility/Header'
+import Navbar from '../utility/Header'
 import Footer from '../utility/Footer'
 import ContactUs from './ContactUs'
 import Comments from './Comments'
@@ -19,13 +20,13 @@ return (
     <Header />
         <div>
             <nav className="navbar navbar-dark  ">
-                
-            <Link to ='/LoginProfile'>Login</Link>
-                    <Link to ='/ScheduleServices' >See or Schedule Service(s)</Link>
-                    <Link to = '/BeforeAndAfter'>Before and After Photos</Link>
-                    <Link to = '/GiftCertificates'>Gift Certificates Available</Link>  
-                    <Link to ='/Comments'>Comments?</Link>
-                    {/* <Link to = 'home'>Home Page</Link> */}
+                <Link to = 'home'>Home Page</Link>
+                <Link to ='/LoginProfile'>Login</Link>
+                <Link to ='/ScheduleServices' >See or Schedule Service(s)</Link>
+                <Link to = '/BeforeAndAfter'>Before and After Photos</Link>
+                <Link to = '/GiftCertificates'>Gift Certificates Available</Link>  
+                <Link to ='/Comments'>Comments?</Link>
+               
             </nav>
         </div>
 
