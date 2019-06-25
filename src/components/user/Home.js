@@ -19,8 +19,8 @@ return (
 <div>   
     <Header />
         <div>
-            <nav className="navbar navbar-dark  ">
-                <Link to = 'home'>Home Page</Link>
+            <nav className="/navbar navbar-dark  ">
+                <Link to = '/Home'>Home Page</Link>
                 <Link to ='/LoginProfile'>Login</Link>
                 <Link to ='/ScheduleServices' >See or Schedule Service(s)</Link>
                 <Link to = '/BeforeAndAfter'>Before and After Photos</Link>
