@@ -91,3 +91,10 @@ body {
 .Comment-btn {
   padding-top: 12px;
 }
+
+/* login/profile */
+
+.logintext {
+  margin-right: 200px;
+  margin-left: 200px;
+}
