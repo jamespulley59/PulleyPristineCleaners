@@ -11,13 +11,16 @@ import LoginProfile from "./components/user/LoginProfile";
 import ScheduleServices from "./components/user/ScheduleServices";
 import Admin from "./components/administrator/Admin";
 import AdminCalendar from "./components/administrator/AdminCalendar";
+import Header from './components/utility/Header';
+import Navbar from './components/utility/Navbar';
 
 
 
 function App() {
   return (
    <Router>
-     
+     <Header />
+     <Navbar />
     <Route exact path='/' component={Home} />
     <Route exact path='/Home' component={Home} /> 
     <Route exact path="/BeforeAndAfter" component={BeforeAndAfter} />
@@ -28,7 +31,6 @@ function App() {
     <Route exact path="/ScheduleServices" component={ScheduleServices} />   
     <Route exact path="/Admin" component={Admin} />
     <Route exact path="/AdminCalendar" component={AdminCalendar} />
-   
     </Router>
   );
 }
