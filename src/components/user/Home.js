@@ -18,8 +18,6 @@ render() {
      
 return (
 <div>   
-<<<<<<< HEAD
-=======
     <Header />
         <div>
             <nav className="navbar navbar-dark  ">
@@ -33,7 +31,6 @@ return (
             </nav>
         </div>
 
->>>>>>> 363694668343b4fff5efa7329f2f521b08909b29
     <section>
         <div className="row">
             <div className="col-lg-6 text-center">
