@@ -12,7 +12,8 @@ export default class Navbar extends Component {
                 <Link to = '/BeforeAndAfter'>Before and After Photos</Link>
                 <Link to = '/GiftCertificates'>Gift Certificates Available</Link>  
                 <Link to ='/Comments'>Comments?</Link>
-                {/* <Link to = 'home'>Home Page</Link> */}
+                <Link to = 'home'>Home Page</Link>
+                
             </nav>
         )
     }
