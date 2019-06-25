@@ -11,7 +11,7 @@ export default class GiftCertificates extends Component {
   render() {
     return (
       <div>
-        <Header />
+       
         <h4 className="busy">
           Give the gift of a clean home to someone with a busy lifestyle
         </h4>

@@ -3,14 +3,16 @@ import {Link } from "react-router-dom"
 
 export default class Navbar extends Component {
     render() {
-        const {backBtn, title, rightBtn, form, rightBtnTo} = this.props
         return (
-            <nav className="navbar navbar-dark bg-primary fixed-top">
-             <Link to="../user/LoginProfile"></Link>
-             <Link to = "../user/Home"></Link>
-             <Link to = "../user/ScheduleServices"></Link>
-             <Link to = "../user/Comment"></Link>
-
+            <nav className="navbar navbar-dark">
+                
+                <Link to ='/LoginProfile'>Login</Link>
+                <Link to ='/ScheduleServices' >See or Schedule Service(s)</Link>
+                <Link to = '/BeforeAndAfter'>Before and After Photos</Link>
+                <Link to = '/GiftCertificates'>Gift Certificates Available</Link>  
+                <Link to ='/Comments'>Comments?</Link>
+                <Link to = 'home'>Home Page</Link>
+                
             </nav>
         )
     }

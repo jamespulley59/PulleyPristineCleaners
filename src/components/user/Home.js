@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import Header from '../utility/Header'
+import Navbar from '../utility/Navbar'
 import Footer from '../utility/Footer'
 import ContactUs from './ContactUs'
 import Comments from './Comments'
@@ -11,24 +12,12 @@ import LoginProfile from './LoginProfile'
 import pic2 from "../img/pic2.jpg"
 import discount from "../img/discount.png"
 
+
 export default class Home extends Component {
 render() {
      
 return (
 <div>   
-    <Header />
-        <div>
-            <nav className="navbar navbar-dark  ">
-                
-                    <Link to ='/LoginProfile'>Login</Link>
-                    <Link to ='/ScheduleServices' >See or Schedule Service(s)</Link>
-                    <Link to = '/BeforeAndAfter'>Before and After Photos</Link>
-                    <Link to = '/GiftCertificates'>Gift Certificates Available</Link>  
-                    <Link to ='/Comments'>Comments?</Link>
-                    {/* <Link to = 'home'>Home Page</Link> */}
-            </nav>
-        </div>
-
     <section>
         <div className="row">
             <div className="col-lg-6 text-center">

@@ -7,6 +7,12 @@ Header {
   padding-bottom: 20px; 
   font-size: 80px;
 }
+
+nav {
+  padding-bottom: 40px !important;
+}
+
+
 Footer {
   background-color: rgb(191, 195, 221);
  
@@ -14,8 +20,7 @@ Footer {
 
 body {
   background-color: rgb(191, 195, 221);
-  /* padding-top:70px; */
-  padding-bottom: 70px;
+    padding-bottom: 70px;
 } 
 
 a {
@@ -70,3 +75,19 @@ body {
   margin-bottom: 20px;
 }
 
+/* comments page */
+
+.textarea {
+  background: rgb(216, 218, 224);
+
+}
+
+.comments-img {
+  width: 400px;
+  height: 400px;
+  margin-left: 150px;  
+}
+
+.Comment-btn {
+  padding-top: 12px;
+}

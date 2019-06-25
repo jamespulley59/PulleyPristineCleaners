@@ -7,7 +7,7 @@ render() {
     //const {uid}= this.props
     return (
         <div className='footer'>                
-            <Link className='btn btn-block' to="/contact">
+            <Link className='btn btn-block fixed-bottom' to="/contact">
                 <h2 className='text-center' >Contact Us</h2>
             </Link>               
         </div>
