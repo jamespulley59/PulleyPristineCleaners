@@ -70,3 +70,22 @@ body {
   margin-bottom: 20px;
 }
 
+.carousel-inner img {       
+  display:block;
+  height: auto; 
+  max-width: 100%;
+}
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img{ 
+margin: auto;
+}
+
+.center {
+  text-align: center
+}
+
+.house {
+  margin-top: 100px;
+
+}
