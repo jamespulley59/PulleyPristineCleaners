@@ -5,7 +5,7 @@ import Header from "../utility/Header";
 import Footer from "../utility/Footer";
 //import {css} from './src/App.css';
 import {giftCert} from "../img/giftCert.jpg";
-import {off} from "../img/discount.png"
+import {discount} from "../img/discount.png"
 
 export default class GiftCertificates extends Component {
   render() {
@@ -65,7 +65,7 @@ export default class GiftCertificates extends Component {
                 </form>
               </div>
             </section>
-            <img className="off" src={off} alt=""/>
+            <img src={discount} alt=""/>
           </div>
 
           <div className="col-lg-6">
