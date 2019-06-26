@@ -1,15 +1,5 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import Header from '../utility/Header'
-import Navbar from '../utility/Header'
-import Footer from '../utility/Footer'
-import ContactUs from './ContactUs'
-import Home from './Home'
-import ScheduleServices from './ScheduleServices'
-import BeforeAndAfter from './BeforeAndAfter'
-import GiftCertificates from './GiftCertificates'
-import LoginProfile from './LoginProfile'
-import pic2 from "../img/pic2.jpg"
 import discount from "../img/discount.png"
 
 export default class Comments extends Component {
@@ -41,7 +31,7 @@ return (
         <div className='col-sm-8'> 
             <h2 className='text-center'>Your Comments?</h2>    
                 <textarea  
-                    rows='5'
+                    rows='10'
                     className='container textarea'
                     type='text'
                     placeholder='Type your comments here'
@@ -57,7 +47,7 @@ return (
             </div>        
         </div>    
         <div className='col-sm-4'> 
-            <div className='comments-img'>        
+            <div className='comments-img max-auto'>        
                 <img className='img-fluid' src={discount} alt="" />
             </div>        
         </div>
