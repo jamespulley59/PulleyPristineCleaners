@@ -18,7 +18,6 @@ import Footer from "./components/utility/Footer";
 function App() {
   return (
    <Router>
-
     <Header />
     <Navbar />
     <Route exact path='/' component={Home} />
