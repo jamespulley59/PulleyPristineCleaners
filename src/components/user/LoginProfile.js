@@ -126,5 +126,6 @@ export default class LoginProfile extends Component {
             </div>   
         </div>
     </div>
-)}}
+)}
+}
 
