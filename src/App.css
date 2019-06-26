@@ -84,8 +84,7 @@ body {
 
 .comments-img {
   width: 400px;
-  height: 400px;
-  margin-left: 150px;  
+  height: 400px;    
 }
 
 .Comment-btn {
@@ -94,7 +93,14 @@ body {
 
 /* login/profile */
 
+/* to keep text from spreading across page */
 .logintext {
   margin-right: 200px;
   margin-left: 200px;
+}
+
+/* to size img */
+.login-img {
+  height: 50vh;
+  width: 50vh;  
 }

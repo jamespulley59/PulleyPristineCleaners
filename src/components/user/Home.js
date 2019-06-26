@@ -1,14 +1,4 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-import Header from '../utility/Header'
-import Navbar from '../utility/Navbar'
-import Footer from '../utility/Footer'
-import ContactUs from './ContactUs'
-import Comments from './Comments'
-import ScheduleServices from './ScheduleServices'
-import BeforeAndAfter from './BeforeAndAfter'
-import GiftCertificates from './GiftCertificates'
-import LoginProfile from './LoginProfile'
 import pic2 from "../img/pic2.jpg"
 import discount from "../img/discount.png"
 
@@ -42,13 +32,8 @@ return (
             </div>
             </div>
         </div>
-    </section> 
-    
+    </section>    
+</div>                 
+)}}
 
-    <Footer />
-        
-</div>                    
-    
-)
-}
-}
+
