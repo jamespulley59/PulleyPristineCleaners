@@ -4,7 +4,7 @@ import Header from "../utility/Header";
 //import {navbar} from './utility/Navbar';
 import Footer from "../utility/Footer";
 import giftCert from "../img/giftCert.jpg";
-import discount from "../img/discount.png"
+import discount from "../img/discount.jpg";
 
 export default class GiftCertificates extends Component {
   render() {
@@ -64,7 +64,7 @@ export default class GiftCertificates extends Component {
                 </form>
               </div>
             </section>
-            <img src={discount} alt=""/>
+            <img src={discount} alt="" />
           </div>
 
           <div className="col-lg-6">
@@ -105,11 +105,9 @@ export default class GiftCertificates extends Component {
                 </form>
               </div>
             </section>
-            <img className= "gift" src={giftCert}alt=""  />
+            <img className="gift" src={giftCert} alt="" />
           </div>
-          
         </div>
-        
       </div>
     );
   }
