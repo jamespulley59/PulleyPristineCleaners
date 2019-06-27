@@ -12,7 +12,6 @@ import vacuum from "../img/vacuum.jpg";
 
 
 
-
 export default class BeforeAndAfter extends Component {
   render() {
     return (
@@ -61,7 +60,7 @@ export default class BeforeAndAfter extends Component {
         </div>
         </div>
         
-   
+   npm
         <div className="col-lg-6">
         <div id="carouselExampleCaptions"
           class= "carousel slide"
