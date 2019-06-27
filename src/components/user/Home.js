@@ -16,18 +16,18 @@ return (
             {/* what size is this part of the row */}
             <div className="col-lg-6 text-center">
                 {/* wanted this text outside of p to make it bigger */}
-            <h3>Residential Services</h3>
+                <h3>Residential Services</h3>
             {/* talking */}
                 <p>
                     Our goal is to make you smile when you get home.                               
                     You have enough on your plate; family, work, leisure activities.
                     Imagine coming home, knowing you don't have another job (cleaning) to do.
-                    You're coming home to relax in comfort. Allow us to take care of the small yet time consuming detail of keeping your home showcase clean. Click on Contact Us at the bottom of this page now and find out how much time Pulley's Pristine Clean can save you.
+                    You're coming home to relax in comfort. Allow us to take care of the time consuming detail of keeping your home Pristine Clean. Click on Contact Us at the bottom of this page now and find out how much time Pulley's Pristine Clean can save you.
                 </p>
                 {/* how i want img aligned */}
                 <div className="text-center">
                     {/* img from import above from import file */}
-                <img className='img-fluid' src={discount} alt="" />
+                    <img className='img-fluid' src={discount} alt="" />
                 </div>
             </div>             
             {/* what size is this part */}
@@ -43,7 +43,7 @@ return (
             </div>
         </div>
     </section>    
-      
+      {/* footer from app.js */}
 </div>                      
 )}
 }

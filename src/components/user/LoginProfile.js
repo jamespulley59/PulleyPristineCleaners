@@ -105,7 +105,8 @@ export default class LoginProfile extends Component {
                                     placeholder="Bathrooms" 
                                     />
                         </div>          
-                        <div className='client-homeinfo pb-2'>        <label>Number of bedrooms</label>    
+                        <div className='client-homeinfo pb-2'>        
+                            <label>Number of bedrooms</label>    
                             <input  type="text" 
                                     className="form-control" 
                                     id="bedrooms" 
