@@ -56,7 +56,7 @@ export default class Home extends Component {
                   <h5>*Refrigerators</h5>
                   <h5>*Dish Washing</h5>
                   <h5>*Make Beds/Change Sheets</h5>
-                  <h5>*Mattress/Furniture</h5>
+                  <h5>*Vacuum Mattresses/Furniture</h5>
                   <h5>*Dish Washing</h5>
                 </div>
               </div>
