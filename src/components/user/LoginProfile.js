@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+<<<<<<< HEAD
 import {Link} from 'react-router-dom'
 import discount from "../img/discount.png"
+=======
+>>>>>>> beforeafter
 
 export default class LoginProfile extends Component {
     render() {
         return (
+<<<<<<< HEAD
     <div>        
 
         {/* rows and columns to put username & password on the same line */}
@@ -130,3 +134,11 @@ export default class LoginProfile extends Component {
 )}
 }
 
+=======
+            <div>
+                
+            </div>
+        )
+    }
+}
+>>>>>>> beforeafter

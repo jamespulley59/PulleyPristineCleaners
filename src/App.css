@@ -7,12 +7,11 @@ header {
   padding-bottom: 20px;
   font-size: 80px;
 }
-
-nav {
+<<<<<<< head nav {
   padding-bottom: 40px !important;
 }
 
-footer {
+=======>>>>>>>beforeafter footer {
   background-color: rgb(191, 195, 221);
 }
 
@@ -59,10 +58,6 @@ body {
   padding-bottom: 20px;
 }
 
-/* *services on homepage {
-  margin-right: 20px;
-} */
-
 .busy {
   text-align: center;
 }
@@ -71,36 +66,44 @@ body {
   margin-top: 30px;
 }
 
-.form-group2 {
-  margin-top: 30px;
-  margin-bottom: 20px;
+.carousel-inner img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
-/* comments page */
-
-.textarea {
-  background: rgb(216, 218, 224);
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  margin: auto;
 }
 
-.comments-img {
-  width: 400px;
-  height: 400px;
+.center {
+  text-align: center;
 }
 
-.Comment-btn {
-  padding-top: 12px;
+.house {
+  margin-top: 100px;
 }
 
-/* login/profile */
-
-/* to keep text from spreading across page */
-.logintext {
-  margin-right: 200px;
-  margin-left: 200px;
+.container {
+  margin-left: 100px;
+}
+.starting {
+  margin-top: 250px;
 }
 
-/* to size img */
-.login-img {
-  height: 50vh;
-  width: 50vh;
+.prices {
+  margin-top: 175px;
+}
+
+.description {
+  margin-bottom: 50px;
+}
+
+#gift {
+  margin-top: 70px;
+}
+
+#discount {
+  margin-top: 55px;
 }

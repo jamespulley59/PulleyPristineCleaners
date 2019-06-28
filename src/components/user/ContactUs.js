@@ -1,12 +1,7 @@
-import React, { Component } from 'react'
-import pic2 from "../img/pic2.jpg"
-import discount from "../img/discount.png"
+import React, { Component } from "react";
 
-
-export default class Comments extends Component {
-render() {
-     
-return (
- <div>     
-</div>
-)}}
+export default class ContactUs extends Component {
+  render() {
+    return <div />;
+  }
+}
