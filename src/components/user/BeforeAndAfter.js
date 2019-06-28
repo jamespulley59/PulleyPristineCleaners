@@ -18,9 +18,6 @@ export default class BeforeAndAfter extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <Header />
-
         <div className="row">
           <div className="col-lg-4">
             <div className="container">

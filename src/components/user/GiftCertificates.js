@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../utility/Header";
-//import {navbar} from './utility/Navbar';
+import Navbar from "../utility/Navbar";
 import Footer from "../utility/Footer";
 import gift from "../img/gift.jpg";
 import discount from "../img/discount.jpg";
@@ -10,7 +10,6 @@ export default class GiftCertificates extends Component {
   render() {
     return (
       <div>
-        <Header />
         <h4 className="busy">
           Give the gift of a clean home to someone with a busy lifestyle
         </h4>
