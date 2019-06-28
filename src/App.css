@@ -59,10 +59,13 @@ body {
   padding-bottom: 20px;
 }
 
+<<<<<<< HEAD
 /* *services on homepage {
   margin-right: 20px;
 } */
 
+=======
+>>>>>>> contact
 .busy {
   text-align: center;
 }
@@ -103,4 +106,17 @@ body {
 .login-img {
   height: 50vh;
   width: 50vh;
+<<<<<<< HEAD
+=======
+}
+
+.client-homeinfo1 {
+  padding-bottom: 25px;
+}
+
+/* contctus */
+
+.text-center1 {
+  padding-bottom: 50px !important;
+>>>>>>> contact
 }
