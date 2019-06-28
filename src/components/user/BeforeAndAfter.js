@@ -25,7 +25,7 @@ export default class BeforeAndAfter extends Component {
           <div className="col-lg-4">
             <div className="container">
               <div>
-                <h5>Express Cleaning:</h5>
+                <h4>Express Cleaning:</h4>
               </div>
 
               <div>
@@ -40,7 +40,7 @@ export default class BeforeAndAfter extends Component {
               </div>
               <span />
               <div>
-                <h5>Additional Services:</h5>
+                <h4>Additional Services:</h4>
               </div>
               <div>
                 <ul>
@@ -57,7 +57,7 @@ export default class BeforeAndAfter extends Component {
               className="prices"
               src={prices}
               height={150}
-              width={575}
+              width={550}
               alt=""
             />
           </div>
@@ -67,7 +67,7 @@ export default class BeforeAndAfter extends Component {
               className="description"
               src={description}
               height={40}
-              width={575}
+              width={550}
               alt=""
             />
             <div
@@ -131,7 +131,7 @@ export default class BeforeAndAfter extends Component {
               <img
                 className="discount"
                 src={discount}
-                height={250}
+                height={275}
                 width={300}
                 alt=""
               />
@@ -140,7 +140,7 @@ export default class BeforeAndAfter extends Component {
 
           <div className="col-lg-4 text-justify">
             <div className="container">
-              <h5>Deep Cleaning:</h5>
+              <h4>Deep Cleaning:</h4>
               <li>All express cleaning services</li>
               <li>Windows</li>
               <li>Baseboards</li>

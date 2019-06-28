@@ -63,11 +63,6 @@ body {
   margin-top: 30px;
 }
 
-.form-group2 {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
 .carousel-inner img {
   display: block;
   height: auto;
@@ -98,6 +93,14 @@ body {
   margin-top: 175px;
 }
 
-.discount {
-  margin-top: 75px;
+.description {
+  margin-bottom: 50px;
+}
+
+#gift {
+  margin-top: 70px;
+}
+
+#discount {
+  margin-top: 55px;
 }
