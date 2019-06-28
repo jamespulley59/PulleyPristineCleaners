@@ -1,10 +1,10 @@
 /* utilities */
 
 /* color for all header */
-Header {
+header {
   background-color: rgb(191, 195, 221);
   /* padding-top: 20px; */
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
   font-size: 80px;
 }
 
@@ -12,29 +12,27 @@ nav {
   padding-bottom: 40px !important;
 }
 
-
-Footer {
+footer {
   background-color: rgb(191, 195, 221);
- 
-} 
+}
 
 body {
   background-color: rgb(191, 195, 221);
-    padding-bottom: 70px;
-} 
+  padding-bottom: 70px;
+}
 
 a {
   background-color: rgb(216, 218, 224);
   color: black;
   border: 2px solid rgb(239, 240, 241);
-  padding: 10px 20px; 
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
 }
 
 .row {
-  margin:10px 10px;
+  margin: 10px 10px;
 }
 
 /* Home page */
@@ -43,13 +41,14 @@ a {
   height: 70vh;
   width: 80vh;
   margin-right: 10px;
-} 
+}
 
 .row {
   padding-top: 60px;
 }
 
-.left, .right {
+.left,
+.right {
   width: 25%;
 }
 
@@ -57,18 +56,20 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 20px;
-  padding-bottom: 20px
- 
+  padding-bottom: 20px;
 }
 
-.busy{
+/* *services on homepage {
+  margin-right: 20px;
+} */
+
+.busy {
   text-align: center;
 }
 
 .gift {
   margin-top: 30px;
 }
-
 
 .form-group2 {
   margin-top: 30px;
@@ -79,12 +80,11 @@ body {
 
 .textarea {
   background: rgb(216, 218, 224);
-
 }
 
 .comments-img {
   width: 400px;
-  height: 400px;    
+  height: 400px;
 }
 
 .Comment-btn {
@@ -102,5 +102,5 @@ body {
 /* to size img */
 .login-img {
   height: 50vh;
-  width: 50vh;  
+  width: 50vh;
 }
