@@ -20,60 +20,72 @@ export default class ContactUs extends Component {
             <div className="col-lg-4">
               <h3>Would you like us to contact you?</h3>
               <div className="form-group">
-                <label for="id1">Your name</label>
+                <label>Your name</label>
                 <input
                   class="form-control"
                   type="text"
-                  id="id1"
                   placeholder="Enter your full name here"
                 />
               </div>
               <div className="form-group">
-                <label for="id1">Phone number</label>
+                <label>Phone number</label>
                 <input
                   class="form-control"
                   type="text"
-                  id="id1"
                   placeholder="Enter your phone number here"
                 />
               </div>
               <div>
-                <label className="pt-2">Email</label>
+                <label>Email</label>
                 <input
                   class="form-control"
                   type="text"
-                  id="id1"
                   placeholder="Enter your email here"
                 />
               </div>
-              <div className="form-group">
-                <label for="id1">Subject</label>
+              <div className="pt-3">
+                <label>Subject</label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   type="text"
-                  id="id1"
                   placeholder="optional"
                 />
               </div>
-              <label className="pb-10">Your message</label>
-              <textarea cols="45" rows="5" />
+              <div>
+                <label className="pt-3">Your message</label>
+              </div>
+              <textarea className="form-control" rows="3" />
+              <div className="text-center pt-2">
+                <Link className="btn-outline" to="./administrator/Admin">
+                  Send your message
+                </Link>
+              </div>
             </div>
-
             <div className="col-lg-4 pt-5">
               <img className="img-fluid" src={discount} alt="" />
             </div>
 
             <div className="col-lg-4">
               <h2>Or would you like to contact us?</h2>
-              <h4>Call us at 774-441-0026</h4>
-              <h4>Email us at .........</h4>
-              <h4>Our Instagram is .........</h4>
-              <h4>Follow us on Twitter at ...........</h4>
-              <h4>Or on Facebook at ........... </h4>
+              <br />
+              <h5>Call us at:</h5>
+              <h4>774-441-0026</h4>
+              <br />
+              <h5>Email us at:</h5>
+              <h4>PulleysPristineClean@gmail.com</h4>
+              <br />
+              <h5>Our Instagram is .........</h5>
+              <h4>774-441-0026</h4>
+              <br />
+              <h5>Follow us on Twitter at ...........</h5>
+              <h4>774-441-0026</h4>
+              <br />
+              <h5>Or on Facebook at ........... </h5>
+              <h4>774-441-0026</h4>
             </div>
           </div>
         </div>
-        <h2 className="text-center">
+        <h2 className="text-center text-center1">
           For current customers, please use our Comments page if you don't have
           time for a chat.
         </h2>
