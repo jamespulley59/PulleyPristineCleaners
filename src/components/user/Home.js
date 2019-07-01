@@ -1,24 +1,20 @@
 import prices from "../img/prices.jpg";
 import starting from "../img/starting.jpg";
 import React, { Component } from "react";
+import prices from "../img/prices.jpg";
+import starting from "../img/starting.jpg";
 import { Link } from "react-router-dom";
 import pic2 from "../img/pic2.jpg";
-import discount from "../img/discount.png";
+import discount from "../img/discount.jpg";
 
 export default class Home extends Component {
   render() {
     return (
       <div>
-        {/* Header from utility */}
-        {/* Navbar from utility */}
         <section>
-          {/* tag to keep rows together */}
           <div className="row">
-            {/* what size is this part of the row */}
             <div className="col-lg-6 text-center">
-              {/* wanted this text outside of p to make it bigger */}
               <h3>Residential Services</h3>
-              {/* talking */}
               <p>
                 Our goal is to make you smile when you get home. You have enough
                 on your plate; family, work, leisure activities. Imagine coming
@@ -33,6 +29,10 @@ export default class Home extends Component {
                 {/* img from import above from import file */}
                 <img className="img-fluid" src={discount} alt="" />
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> e8d2fad5d9ccdad20ae0b18d6bcc6426793e1504
               <div className="row">
                 {/* what size is this part of the row */}
                 <div className="col-lg-6 text-center">
@@ -68,16 +68,33 @@ export default class Home extends Component {
               <h3>Commercial Services</h3>
               {/* talking */}
               <p>
+                the small yet time consuming detail of keeping your home
+                showcase clean Click on Contact Us at the bottom of this page
+                now and find out how much time Pulley's Pristine Clean can save
+                you.
+              </p>
+              <div className="text-center">
+                <img className="img-fluid" src={pic2} alt="" />
+              </div>
+            </div>
+
+            <div className="col-lg-6 text-center">
+              <h3>Commercial Services</h3>
+              <p>
                 Everyone loves a clean office, especially your clients. We can
                 keep your space Pulley's Pristine Clean on a daily, weekly or
                 bi-weekly basis. A clean workspace says something to visitors
                 and staff. Let your office's appearance speak to your clients.
                 Click on Contact Us below to arrange a free in-office estimate.
               </p>
+<<<<<<< HEAD
               <div className="text-center">
                 {/* where i got pic from (from above import) */}
                 <img className="img-fluid homeimg pb-5" src={pic2} alt="" />
               </div>
+=======
+
+>>>>>>> e8d2fad5d9ccdad20ae0b18d6bcc6426793e1504
               <div className="text-center">
                 {/* where i got pic from (from above import) */}
                 <img

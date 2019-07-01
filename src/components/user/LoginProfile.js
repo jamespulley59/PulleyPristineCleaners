@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import discount from "../img/discount.png";
+import discount from "../img/discount.jpg";
 
 export default class LoginProfile extends Component {
   render() {

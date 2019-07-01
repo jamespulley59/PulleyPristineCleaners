@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import pic2 from "../img/pic2.jpg";
-import discount from "../img/discount.png";
+import discount from "../img/discount.jpg";
 
 export default class ContactUs extends Component {
   render() {
