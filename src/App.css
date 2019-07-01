@@ -7,11 +7,12 @@ header {
   padding-bottom: 20px;
   font-size: 80px;
 }
-<<<<<<< head nav {
-  padding-bottom: 40px !important;
+
+nav {
+  padding-bottom: 40px;
 }
 
-=======>>>>>>>beforeafter footer {
+footer {
   background-color: rgb(191, 195, 221);
 }
 
@@ -58,18 +59,12 @@ body {
   padding-bottom: 20px;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 /* *services on homepage {
   margin-right: 20px;
 } */
 
-=======
->>>>>>> contact
->>>>>>> 324a4d42323772a54d2965c28820356f033a4025
 .busy {
-  text-align: center;
+  margin-top: 40px;
 }
 
 .gift {

@@ -10,10 +10,10 @@ export default class GiftCertificates extends Component {
   render() {
     return (
       <div>
-        <h4 className="busy">
+        <h4 className="busy text-center">
           Give the gift of a clean home to someone with a busy lifestyle
         </h4>
-        <h4 className="busy"> More clean, less stress</h4>
+        <h4 className="text-center"> More clean, less stress</h4>
 
         <div className="row">
           <div className="col-lg-4" />
