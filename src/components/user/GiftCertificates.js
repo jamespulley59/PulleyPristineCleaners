@@ -4,14 +4,13 @@ import Header from "../utility/Header";
 //import {navbar} from './utility/Navbar';
 import Footer from "../utility/Footer";
 //import {css} from './src/App.css';
-import giftCert from "../img/giftCert.jpg";
-import off from "../img/discount.png"
+import giftCert from "../img/giftCert.png";
+import off from "../img/discount.png";
 
 export default class GiftCertificates extends Component {
   render() {
     return (
       <div>
-       
         <h4 className="busy">
           Give the gift of a clean home to someone with a busy lifestyle
         </h4>
@@ -65,7 +64,7 @@ export default class GiftCertificates extends Component {
                 </form>
               </div>
             </section>
-            <img className="off" src={off} alt=""/>
+            <img className="off" src={off} alt="" />
           </div>
 
           <div className="col-lg-6">
@@ -106,11 +105,9 @@ export default class GiftCertificates extends Component {
                 </form>
               </div>
             </section>
-            <img className= "gift" src={giftCert}alt=""  />
+            <img className="gift" src={giftCert} alt="" />
           </div>
-          
         </div>
-        
       </div>
     );
   }

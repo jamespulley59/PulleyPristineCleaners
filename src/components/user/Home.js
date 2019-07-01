@@ -1,11 +1,9 @@
-import React, { Component } from "react";
-import pic2 from "../img/pic2.jpg";
-import discount from "../img/discount.png";
-<<<<<<< HEAD
 import prices from "../img/prices.jpg";
 import starting from "../img/starting.jpg";
-=======
->>>>>>> contact
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import pic2 from "../img/pic2.jpg";
+import discount from "../img/discount.png";
 
 export default class Home extends Component {
   render() {
@@ -35,7 +33,6 @@ export default class Home extends Component {
                 {/* img from import above from import file */}
                 <img className="img-fluid" src={discount} alt="" />
               </div>
-<<<<<<< HEAD
               <div className="row">
                 {/* what size is this part of the row */}
                 <div className="col-lg-6 text-center">
@@ -64,8 +61,6 @@ export default class Home extends Component {
                   <h5>*Dish Washing</h5>
                 </div>
               </div>
-=======
->>>>>>> contact
             </div>
             {/* what size is this part */}
             <div className="col-lg-6 text-center">
@@ -81,7 +76,6 @@ export default class Home extends Component {
               </p>
               <div className="text-center">
                 {/* where i got pic from (from above import) */}
-<<<<<<< HEAD
                 <img className="img-fluid homeimg pb-5" src={pic2} alt="" />
               </div>
               <div className="text-center">
@@ -101,9 +95,6 @@ export default class Home extends Component {
                   width="70%"
                   height="150px"
                 />
-=======
-                <img className="img-fluid homeimg" src={pic2} alt="" />
->>>>>>> contact
               </div>
             </div>
           </div>
