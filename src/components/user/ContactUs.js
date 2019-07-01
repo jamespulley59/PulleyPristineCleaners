@@ -35,6 +35,7 @@ export default class ContactUs extends Component {
                   placeholder="Enter your phone number here"
                 />
               </div>
+
               <div>
                 <label>Email</label>
                 <input
@@ -61,6 +62,7 @@ export default class ContactUs extends Component {
                 </Link>
               </div>
             </div>
+
             <div className="col-lg-4 pt-5">
               <img className="img-fluid" src={discount} alt="" />
             </div>
