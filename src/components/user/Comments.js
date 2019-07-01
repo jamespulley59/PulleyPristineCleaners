@@ -29,9 +29,8 @@ export default class Comments extends Component {
           </h4>
           <h3 className="text-center">Let us hear from you</h3>
         </div>
-
         <div className="row">
-          <div className="col-sm-8">
+          <div className="col-lg-8">
             <h2 className="text-center">Your Comments?</h2>
             <textarea
               rows="10"
@@ -41,15 +40,15 @@ export default class Comments extends Component {
               name="description"
               max-length="400"
             />
-            <div className="text-center Comment-btn">
+            <div className="text-center Comment-btn pt-2 pb-5">
               <Link className="btn-outline" to="./administrator/Admin">
                 Submit your comments
               </Link>
             </div>
           </div>
-          <div className="col-sm-4">
-            <div className="comments-img max-auto">
-              <img className="img-fluid" src={discount} alt="" />
+          <div className="col-lg-4">
+            <div className="img max-auto pt-5 mr-4">
+              <img className="img-fluid float-right" src={discount} alt="" />
             </div>
           </div>
         </div>

@@ -98,53 +98,55 @@ export default class LoginProfile extends Component {
             <div className="btn btn-block">
               <Link>Submit your information</Link>
             </div>
-            {/* link to get info to admin */}
-            <div className="btn btn-block btn-warning">
-              <Link to="../administrator/Admin">Admin</Link>
-            </div>
           </div>
 
           {/* second col for img and client home info */}
           <div className="col-sm-6">
             <div className="login-img mx-auto">
               <img className="img-fluid " src={discount} alt="" />
-            </div>
-            {/* getting client home size */}
 
-            <div className="row">
-              <div className="col-xl-3" />
-              <div className="col-xl-6">
-                <h4 className="text-center">Please tell us about your home</h4>
-                <div className="client-homeinfo pb-2">
-                  <label>Number of bathrooms</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="bathrooms"
-                    placeholder="Bathrooms"
-                  />
-                </div>
-                <div className="client-homeinfo pb-2">
-                  <label>Number of bedrooms</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="bedrooms"
-                    placeholder="Bedrooms"
-                  />
-                </div>
-                <div className="client-homeinfo1">
-                  <label>Total square footage</label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="square feet"
-                    placeholder="Square footage"
-                  />
+              {/* getting client home size */}
+
+              <div className="row">
+                {/* <div className="col-sm-3" /> */}
+                <div className="col-sm-6">
+                  <h4 className="text-center">
+                    Please tell us about your home
+                  </h4>
+                  <div className="client-homeinfo pb-2">
+                    <label>Number of bathrooms</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="bathrooms"
+                      placeholder="Bathrooms"
+                    />
+                  </div>
+                  <div className="client-homeinfo pb-2">
+                    <label>Number of bedrooms</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="bedrooms"
+                      placeholder="Bedrooms"
+                    />
+                  </div>
+                  <div className="client-homeinfo1">
+                    <label>Total square footage</label>
+                    <input
+                      type="number"
+                      className="form-control"
+                      id="square feet"
+                      placeholder="Square footage"
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="col-xl-3" />
             </div>
+          </div>
+          {/* link to get info to admin */}
+          <div className="btn block btn-warning">
+            <Link to="../administrator/Admin">Admin</Link>
           </div>
         </div>
       </div>
