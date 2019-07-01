@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-
-export default class ContactUs extends Component {
-  render() {
-    return <div />;
-=======
 import { Link } from "react-router-dom";
 import pic2 from "../img/pic2.jpg";
-import discount from "../img/discount.png";
+import discount from "../img/discount.jpg";
 
 export default class ContactUs extends Component {
   render() {
@@ -97,6 +91,5 @@ export default class ContactUs extends Component {
         </h2>
       </div>
     );
->>>>>>> 324a4d42323772a54d2965c28820356f033a4025
   }
 }

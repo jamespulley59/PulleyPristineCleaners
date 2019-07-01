@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-import React, { Component } from 'react'
-<<<<<<< HEAD
-import {Link} from 'react-router-dom'
-import discount from "../img/discount.png"
-=======
->>>>>>> beforeafter
-
-export default class LoginProfile extends Component {
-    render() {
-        return (
-<<<<<<< HEAD
-    <div>        
-
-=======
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import discount from "../img/discount.png";
+import discount from "../img/discount.jpg";
 
 export default class LoginProfile extends Component {
   render() {
     return (
       <div>
->>>>>>> 324a4d42323772a54d2965c28820356f033a4025
         {/* rows and columns to put username & password on the same line */}
         <div className="row">
           {/* text explaining page's purpose */}
@@ -167,15 +151,3 @@ export default class LoginProfile extends Component {
     );
   }
 }
-<<<<<<< HEAD
-
-=======
-            <div>
-                
-            </div>
-        )
-    }
-}
->>>>>>> beforeafter
-=======
->>>>>>> 324a4d42323772a54d2965c28820356f033a4025
