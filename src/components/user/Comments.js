@@ -23,7 +23,6 @@ export default class Comments extends Component {
             cheerfully comply with any directions. Please let us know how to be
             of better service to you.
           </h4>
-          <h4 className="text-center" />
           <h4 className="text-center">
             Of course, we also like to hear when we have done something well.
             Your testimonial comments are always appreciated.
