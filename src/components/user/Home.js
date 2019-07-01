@@ -1,3 +1,5 @@
+import prices from "../img/prices.jpg";
+import starting from "../img/starting.jpg";
 import React, { Component } from "react";
 import prices from "../img/prices.jpg";
 import starting from "../img/starting.jpg";
@@ -27,7 +29,10 @@ export default class Home extends Component {
                 {/* img from import above from import file */}
                 <img className="img-fluid" src={discount} alt="" />
               </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> e8d2fad5d9ccdad20ae0b18d6bcc6426793e1504
               <div className="row">
                 {/* what size is this part of the row */}
                 <div className="col-lg-6 text-center">
@@ -82,7 +87,14 @@ export default class Home extends Component {
                 and staff. Let your office's appearance speak to your clients.
                 Click on Contact Us below to arrange a free in-office estimate.
               </p>
+<<<<<<< HEAD
+              <div className="text-center">
+                {/* where i got pic from (from above import) */}
+                <img className="img-fluid homeimg pb-5" src={pic2} alt="" />
+              </div>
+=======
 
+>>>>>>> e8d2fad5d9ccdad20ae0b18d6bcc6426793e1504
               <div className="text-center">
                 {/* where i got pic from (from above import) */}
                 <img
