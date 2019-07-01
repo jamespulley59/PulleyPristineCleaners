@@ -50,13 +50,7 @@ export default class BeforeAndAfter extends Component {
                 </ul>
               </div>
             </div>
-            <img
-              className="prices"
-              src={prices}
-              height={150}
-              width={550}
-              alt=""
-            />
+            <img id="prices" src={prices} height={150} width={550} alt="" />
           </div>
 
           <div className="col-lg-4 text-center">
