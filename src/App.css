@@ -119,8 +119,12 @@ body {
   padding-bottom: 25px;
 }
 
-/* contctus */
+/* contactus */
 
 .text-center1 {
   padding-bottom: 50px !important;
+}
+
+.contactbtn {
+  margin-bottom: 50px;
 }
