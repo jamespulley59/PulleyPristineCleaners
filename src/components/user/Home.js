@@ -2,9 +2,11 @@ import React, { Component } from "react";
 <<<<<<< HEAD
 import pic2 from "../img/pic2.jpg";
 import discount from "../img/discount.png";
+<<<<<<< HEAD
 import prices from "../img/prices.jpg";
 import starting from "../img/starting.jpg";
 =======
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import Header from "../utility/Header";
 import Footer from "../utility/Footer";
@@ -17,6 +19,9 @@ import LoginProfile from "./LoginProfile";
 import pic2 from "../img/pic2.jpg";
 import discount from "../img/discount.jpg";
 >>>>>>> beforeafter
+=======
+>>>>>>> contact
+>>>>>>> 324a4d42323772a54d2965c28820356f033a4025
 
 export default class Home extends Component {
   render() {
@@ -66,6 +71,7 @@ export default class Home extends Component {
                 {/* img from import above from import file */}
                 <img className="img-fluid" src={discount} alt="" />
               </div>
+<<<<<<< HEAD
               <div className="row">
                 {/* what size is this part of the row */}
                 <div className="col-lg-6 text-center">
@@ -90,10 +96,12 @@ export default class Home extends Component {
                   <h5>*Refrigerators</h5>
                   <h5>*Dish Washing</h5>
                   <h5>*Make Beds/Change Sheets</h5>
-                  <h5>*Mattress/Furniture</h5>
+                  <h5>*Vacuum Mattresses/Furniture</h5>
                   <h5>*Dish Washing</h5>
                 </div>
               </div>
+=======
+>>>>>>> contact
             </div>
             {/* what size is this part */}
             <div className="col-lg-6 text-center">
@@ -124,6 +132,7 @@ export default class Home extends Component {
               <div className="text-center">
 <<<<<<< HEAD
                 {/* where i got pic from (from above import) */}
+<<<<<<< HEAD
                 <img className="img-fluid homeimg pb-5" src={pic2} alt="" />
               </div>
               <div className="text-center">
@@ -145,7 +154,11 @@ export default class Home extends Component {
                 />
 =======
                 <img className="img-fluid homeimg" src={pic2} alt="" />
+<<<<<<< HEAD
 >>>>>>> beforeafter
+=======
+>>>>>>> contact
+>>>>>>> 324a4d42323772a54d2965c28820356f033a4025
               </div>
             </div>
           </div>

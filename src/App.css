@@ -58,6 +58,16 @@ body {
   padding-bottom: 20px;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/* *services on homepage {
+  margin-right: 20px;
+} */
+
+=======
+>>>>>>> contact
+>>>>>>> 324a4d42323772a54d2965c28820356f033a4025
 .busy {
   text-align: center;
 }
@@ -104,6 +114,26 @@ body {
   margin-top: 70px;
 }
 
+<<<<<<< HEAD
 #discount {
   margin-top: 55px;
+=======
+/* to size img */
+.login-img {
+  height: 50vh;
+  width: 50vh;
+<<<<<<< HEAD
+=======
+}
+
+.client-homeinfo1 {
+  padding-bottom: 25px;
+}
+
+/* contctus */
+
+.text-center1 {
+  padding-bottom: 50px !important;
+>>>>>>> contact
+>>>>>>> 324a4d42323772a54d2965c28820356f033a4025
 }
