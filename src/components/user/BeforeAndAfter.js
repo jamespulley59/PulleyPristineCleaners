@@ -20,7 +20,7 @@ export default class BeforeAndAfter extends Component {
       <div>
         <div className="row">
           <div className="col-lg-4">
-            <div className="container">
+            <div className="bacontainer">
               <div>
                 <h4>Express Cleaning:</h4>
               </div>
@@ -130,7 +130,7 @@ export default class BeforeAndAfter extends Component {
           </div>
 
           <div className="col-lg-4 text-justify">
-            <div className="container">
+            <div className="bacontainer">
               <h4>Deep Cleaning:</h4>
               <li>All express cleaning services</li>
               <li>Windows</li>

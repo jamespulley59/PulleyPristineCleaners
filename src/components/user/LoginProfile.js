@@ -14,7 +14,7 @@ export default class LoginProfile extends Component {
             to login to schedule an in-home estimate, simply click on Contact Us
             below.
           </h4>
-          <div className="col-sm-6">
+          <div className="col-lg-6">
             <div className="form-group">
               <label>Username</label>
               <input
@@ -25,7 +25,7 @@ export default class LoginProfile extends Component {
               />
             </div>
           </div>
-          <div className="col-sm-6">
+          <div className="col-lg-6">
             <div className="form-group">
               <label>Password</label>
               <input
@@ -40,7 +40,7 @@ export default class LoginProfile extends Component {
 
         {/* row and column to place input fields to left of page */}
         <div className="row">
-          <div className="col-sm-6">
+          <div className="col-lg-6">
             {/* explain add and edit function */}
             <h4>
               {" "}
@@ -99,17 +99,16 @@ export default class LoginProfile extends Component {
               <Link>Submit your information</Link>
             </div>
           </div>
-
           {/* second col for img and client home info */}
-          <div className="col-sm-6">
-            <div className="login-img mx-auto">
+          <div className="col-lg-6 text-center">
+            <div className="mx-auto">
               <img className="img-fluid " src={discount} alt="" />
 
               {/* getting client home size */}
 
               <div className="row">
-                {/* <div className="col-sm-3" /> */}
-                <div className="col-sm-6">
+                <div className="col-lg-3" />
+                <div className="col-lg-6 text-center">
                   <h4 className="text-center">
                     Please tell us about your home
                   </h4>

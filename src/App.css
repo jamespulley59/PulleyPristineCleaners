@@ -86,7 +86,7 @@ body {
   margin-top: 100px;
 }
 
-.container {
+.bacontainer {
   margin-left: 100px;
 }
 .starting {
@@ -111,6 +111,7 @@ body {
 
 /* to size img */
 .login-img {
+  text-align: center;
   height: 50vh;
   width: 50vh;
 }
