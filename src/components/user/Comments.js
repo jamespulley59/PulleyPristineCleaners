@@ -5,11 +5,10 @@ import discount from "../img/discount.jpg";
 export default class Comments extends Component {
   render() {
     return (
-      <div className="Comments">
+      <div>
         <div className="container text-center">
           <h2>Your Opinion Matters</h2>
           <h4 className="">
-            {" "}
             We want to hear from you. Is there something we can do better? Do
             less or more of?
           </h4>
@@ -23,7 +22,7 @@ export default class Comments extends Component {
             cheerfully comply with any directions. Please let us know how to be
             of better service to you.
           </h4>
-          <h4 className="text-center" />
+
           <h4 className="text-center">
             Of course, we also like to hear when we have done something well.
             Your testimonial comments are always appreciated.

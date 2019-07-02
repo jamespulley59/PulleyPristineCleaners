@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import starting from "../img/starting.jpg";
 import prices from "../img/prices.jpg";
 import pic2 from "../img/pic2.jpg";

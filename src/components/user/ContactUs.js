@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import pic2 from "../img/pic2.jpg";
 import discount from "../img/discount.jpg";
 
 export default class ContactUs extends Component {
@@ -22,7 +21,7 @@ export default class ContactUs extends Component {
             <div className="form-group">
               <label>Your name</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 placeholder="Enter your full name here"
               />
@@ -39,7 +38,7 @@ export default class ContactUs extends Component {
             <div>
               <label>Email</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 placeholder="Enter your email here"
               />

@@ -1,18 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Header from "../utility/Header";
-import Navbar from "../utility/Navbar";
-import Footer from "../utility/Footer";
 import clutter1 from "../img/clutter1.jpg";
 import kitchen from "../img/kitchen.jpg";
-import clutter2 from "../img/clutter2.jpg";
 import whiteroom from "../img/whiteroom.jpg";
 import clutter3 from "../img/clutter3.jpg";
-import vacuum from "../img/vacuum.jpg";
-import prices from "../img/prices.jpg";
 import starting from "../img/starting.jpg";
 import description from "../img/description.jpg";
 import discount from "../img/discount.jpg";
+import prices from "../img/prices.jpg";
 
 export default class BeforeAndAfter extends Component {
   render() {
