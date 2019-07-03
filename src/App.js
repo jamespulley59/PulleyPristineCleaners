@@ -20,16 +20,18 @@ function App() {
     <Router>
       <Header />
       <Navbar />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/Home" component={Home} />
-      <Route exact path="/BeforeAndAfter" component={BeforeAndAfter} />
-      <Route exact path="/Comments" component={Comments} />
-      <Route exact path="/ContactUs" component={ContactUs} />
-      <Route exact path="/GiftCertificates" component={GiftCertificates} />
-      <Route exact path="/LoginProfile" component={LoginProfile} />
-      <Route exact path="/ScheduleServices" component={ScheduleServices} />
-      <Route exact path="/Admin" component={Admin} />
-      <Route exact path="/AdminCalendar" component={AdminCalendar} />
+      <div className="main-section">
+        <Route exact path="/" component={Home} />
+        <Route exact path="/Home" component={Home} />
+        <Route exact path="/BeforeAndAfter" component={BeforeAndAfter} />
+        <Route exact path="/Comments" component={Comments} />
+        <Route exact path="/ContactUs" component={ContactUs} />
+        <Route exact path="/GiftCertificates" component={GiftCertificates} />
+        <Route exact path="/LoginProfile" component={LoginProfile} />
+        <Route exact path="/ScheduleServices" component={ScheduleServices} />
+        <Route exact path="/Admin" component={Admin} />
+        <Route exact path="/AdminCalendar" component={AdminCalendar} />
+      </div>
       <Footer />
     </Router>
   );

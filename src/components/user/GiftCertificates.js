@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Header from "../utility/Header";
-import Navbar from "../utility/Navbar";
-import Footer from "../utility/Footer";
 import gift from "../img/gift.jpg";
 import discount from "../img/discount.jpg";
 
