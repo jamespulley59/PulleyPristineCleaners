@@ -105,11 +105,11 @@ body {
 }
 
 #gift {
-  margin-top: 70px;
 }
 
 #discount {
-  margin-top: 55px;
+  margin-top: 25px;
+  margin-bottom: 22px;
 }
 
 /* to size img */
@@ -132,7 +132,10 @@ body {
 .contactbtn {
   margin-bottom: 50px;
 }
-
+/* Gift Cert page Submit button */
+.gcb {
+  padding-bottom: 20px;
+}
 /* schedule */
 .freqbtn {
   width: 300px;
