@@ -1,13 +1,15 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Calendar from "react-calendar";
 import discount from "../img/discount.jpg";
-import { Link } from "react-router-dom";
 import moment from "moment";
+
 export default class ScheduleServices extends Component {
   state = {
     date: "",
     time: "",
-    frequency: ""
+    frequency: "",
+    services: []
   };
 
   onChange = date => {
@@ -28,117 +30,148 @@ export default class ScheduleServices extends Component {
     });
   };
 
+  chooseService = e => {
+    // Do nothing if target is not button
+    if (e.target.tagName !== "BUTTON") {
+      return;
+    }
+    // defines newServices
+    const newServices = this.state.services;
+
+    // index of service
+    const index = newServices.indexOf(e.target.textContent);
+    // check if the service is already in array
+    if (index === -1) {
+      // Adding service user clicked
+      newServices.push(e.target.textContent);
+      e.target.classList.add("bg-primary");
+      e.target.classList.add("text-light");
+    } else {
+      // Remove service from array
+      newServices.splice(index, 1);
+      e.target.classList.remove("bg-primary");
+      e.target.classList.remove("text-light");
+    }
+
+    this.setState({
+      services: newServices
+    });
+    console.log(this.state.services);
+  };
+
   render() {
     return (
       <div>
         <h2 className="text-center">Schedule Your Next Service!</h2>
         <h3 className="text-center">
-          Please click on all the services you require.
+          Please click on all the services you require. Your highlighted
+          selections will be submitted.
         </h3>
         <h3 className="text-center">
-          Please use the calendar to tell us when we should clean.
+          Please use the calendar section to tell us when we should clean.
         </h3>
         <h3 className="text-center">
-          When you click on Submit near the bottom of the page, we will email
+          When you click on Submit near the bottom of this page, we will email
           you a confirmation.
         </h3>
 
         <div className="row">
           <div className="servlist col-lg-3 ">
             <div className="form-group">
-              <Link className="form-control" to="../administrator/admin">
+              <button className="form-control" onClick={this.chooseService}>
                 Dust/Wipe down
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Air Freshen/Deodorize
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Sweep/Mop/Vacuum
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Microwave
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Freezer
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Refrigerator
-              </Link>
+              </button>
             </div>
           </div>
-          <div className="col-lg-3 ">
+          <div className="servlist col-lg-3 ">
             <div className="form-group">
-              <Link className="form-control" to="../administrator/admin">
+              <button className="form-control" onClick={this.chooseService}>
                 Kitchen
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Kitchen Cabinets/Drawers
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Wash Dishes/Pots
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Polish Silverware
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Laundry
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Windows
-              </Link>
+              </button>
             </div>
           </div>
-          <div className="col-lg-3 ">
+          <div className="servlist col-lg-3 ">
             <div className="form-group">
-              <Link className="form-control" to="../administrator/admin">
+              <button className="form-control" onClick={this.chooseService}>
                 Baseboards
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Make Beds/Change Sheets
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClic={this.chooseService}>
                 Bathrooms
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Shampoo Rugs
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Shampoo Furniture
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Polish Wooden Surfaces
-              </Link>
+              </button>
             </div>
           </div>
-          <div className="col-lg-3 ">
+          <div className="servlist col-lg-3 ">
             <div className="form-group">
-              <Link className="form-control" to="../administrator/admin">
+              <button className="form-control" onClick={this.chooseService}>
                 Wash Walls
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Wash/Wax Floors
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Vacuum Mattresses
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Vacuum Drapes
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Oven/Stove Top
-              </Link>
-              <Link className="form-control" to="../administrator/admin">
+              </button>
+              <button className="form-control" onClick={this.chooseService}>
                 Outside Windows
-              </Link>
+              </button>
             </div>
           </div>
         </div>
         <h2 className="text-center">Choose Your Next Cleaning Date.</h2>
         <h3 className="text-center">
-          Please tap on the calendar below to tell us when to clean for you.
+          Please tap on the calendar, frequency and time charts to tell us when
+          to clean for you.
         </h3>
 
-        <h3 className="text-center">Weekends or weekdays, your choice!</h3>
+        <h3 className="text-center">Weekdays or weekends , your choice!</h3>
         <h5 className="text-center">
           Remember, you can always edit your choices (including; services, date,
           frequency and time).
@@ -286,6 +319,12 @@ export default class ScheduleServices extends Component {
             </ul>
             <sp />
             <br />
+            <br />
+
+            <h4>
+              Something special we should know? After submitting your order
+              click on comments at the top of the page.
+            </h4>
             <br />
             <br />
             <Link
