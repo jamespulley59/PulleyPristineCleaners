@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import gift from "../img/gift.jpg";
 import discount from "../img/discount.jpg";
+import { Link } from "react-router-dom";
+
 export default class GiftCertificates extends Component {
   render() {
     return (
