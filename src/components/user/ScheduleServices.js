@@ -317,28 +317,25 @@ export default class ScheduleServices extends Component {
                 </button>
               </li>
             </ul>
-            <sp />
-            <br />
-            <br />
+            
+          
+           
 
-            <h4>
-              Something special we should know? After submitting your order
-              click on comments at the top of the page.
-            </h4>
-            <br />
-            <br />
-            <Link
+           
+       
+                        <Link
               to="../administrator/Admin"
               className="btn btn-block btn-outline-primary ml-3"
             >
               <h2>Submit Your Order</h2>
             </Link>
+             
           </div>
           {/* <span className="col-lg-2" /> */}
           <div className="col-lg-4 text-center">
-            <h4 className="pb-5">You are being scheduled for:</h4>
+            <h4 className="pb-1">You are being scheduled for:</h4>
             <div style={{ minHeight: "90px" }} className="bg-light">
-              <h4 className="pt-4">
+              <h4 className="pt-5">
                 {this.state.date !== ""
                   ? moment(this.state.date).format("MMM Do YYYY")
                   : ""}
@@ -350,9 +347,13 @@ export default class ScheduleServices extends Component {
               className="img-fluid text-center p-5"
               src={discount}
               alt=""
-              width="150%"
-              height="150%"
+              width="300%"
+              height="1700%"
             />
+            <h6>
+              Something special we should know? After submitting your order,
+              click on Comments at the top of the page.
+            </h6>
           </div>
         </div>
       </div>
