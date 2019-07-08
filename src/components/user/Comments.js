@@ -8,12 +8,15 @@ export default class Comments extends Component {
       <div>
         <div className="container text-center">
           <h2>Your Opinion Matters</h2>
+<<<<<<< HEAD
           <h4 className="">
             We want to hear from you. Is there something we can do better? Do
             less or more of?
           </h4>
+=======
+          <br />
+>>>>>>> 2f09b0d429bf8e55c99a7ae1efbe0b720209dfc1
           <h4 className="text-center">
-            <br />
             We would love to hear from you! Is there something we can do better?
             Do less or more of?
             <br />
