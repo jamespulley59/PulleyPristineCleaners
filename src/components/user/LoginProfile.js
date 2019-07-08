@@ -18,6 +18,7 @@ export default class LoginProfile extends Component {
             <div className="form-group">
               <label>Username</label>
               <input
+                value="required"
                 type="username"
                 className="form-control"
                 id="username"
@@ -96,7 +97,7 @@ export default class LoginProfile extends Component {
 
             {/* submit btn to DB */}
             <div className="btn btn-block">
-              <Link>Submit your information</Link>
+              <Link to="db">Submit your information</Link>
             </div>
           </div>
           {/* second col for img and client home info */}
