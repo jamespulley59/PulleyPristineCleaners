@@ -317,19 +317,13 @@ export default class ScheduleServices extends Component {
                 </button>
               </li>
             </ul>
-            
-          
-           
 
-           
-       
-                        <Link
+            <Link
               to="../administrator/Admin"
               className="btn btn-block btn-outline-primary ml-3"
             >
               <h2>Submit Your Order</h2>
             </Link>
-             
           </div>
           {/* <span className="col-lg-2" /> */}
           <div className="col-lg-4 text-center">
