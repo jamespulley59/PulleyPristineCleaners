@@ -7,9 +7,11 @@ import BeforeAndAfter from "./components/user/BeforeAndAfter";
 import Comments from "./components/user/Comments";
 import ContactUs from "./components/user/ContactUs";
 import GiftCertificates from "./components/user/GiftCertificates";
-import LoginProfile from "./components/user/LoginProfile";
+import Login from "./components/user/Login";
+import Profile from "./components/user/Profile";
 import ScheduleServices from "./components/user/ScheduleServices";
 import Admin from "./components/administrator/Admin";
+import Manage from "./components/administrator/Manage";
 import AdminCalendar from "./components/administrator/AdminCalendar";
 import Header from "./components/utility/Header";
 import Navbar from "./components/utility/Navbar";
@@ -27,9 +29,11 @@ function App() {
         <Route exact path="/Comments" component={Comments} />
         <Route exact path="/ContactUs" component={ContactUs} />
         <Route exact path="/GiftCertificates" component={GiftCertificates} />
-        <Route exact path="/LoginProfile" component={LoginProfile} />
+        <Route exact path="/Login" component={Login} />
+        <Route exact path="/Profile" component={Profile} />
         <Route exact path="/ScheduleServices" component={ScheduleServices} />
         <Route exact path="/Admin" component={Admin} />
+        <Route exact path="/Manage" component={Manage} />
         <Route exact path="/AdminCalendar" component={AdminCalendar} />
       </div>
       <Footer />

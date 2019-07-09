@@ -136,16 +136,26 @@ body {
 .gcb {
   padding-bottom: 20px;
 }
+
 /* schedule */
 .freqbtn {
   width: 300px;
   padding-top: 10px;
 }
+
 .servlist {
   text-decoration: none;
   text-color: white;
 }
 
 .You are being scheduled for {
-  text-decoration: 
+  text-decoration: ;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.login {
+  margin-top: 80px;
 }

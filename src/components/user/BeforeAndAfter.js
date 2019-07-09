@@ -77,25 +77,25 @@ export default class BeforeAndAfter extends Component {
               <ul data-target="#carouselExampleCaptions" data-slide-to="3" />
 
               <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="3500">
+                <div class="carousel-item active" data-interval="3000">
                   <img src={clutter1} className="house mx-auto" alt="" />
                   <h1 className="center">Before</h1>
                   <div class="carousel-caption " />
                 </div>
 
-                <div class="carousel-item" data-interval="3000">
+                <div class="carousel-item" data-interval="2500">
                   <img src={kitchen} className="house mx-auto" alt="" />
                   <div class="carousel-caption" />
                   <h1 className="center">After</h1>
                 </div>
 
-                <div class="carousel-item" data-interval="3500">
+                <div class="carousel-item" data-interval="3000">
                   <img src={clutter3} className="house mx-auto" alt="" />
                   <div class="carousel-caption" />
                   <h1 className="center">Before</h1>
                 </div>
 
-                <div class="carousel-item" data-interval="3000">
+                <div class="carousel-item" data-interval="2500">
                   <img src={whiteroom} className="house mx-auto" alt="" />
                   <div class="carousel-caption" />
                   <h1 className="center">After</h1>
