@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import discount from "../img/discount.jpg";
+import axios from "axios";
 
 export default class LoginProfile extends Component {
   state = {
