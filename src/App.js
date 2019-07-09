@@ -7,7 +7,7 @@ import BeforeAndAfter from "./components/user/BeforeAndAfter";
 import Comments from "./components/user/Comments";
 import ContactUs from "./components/user/ContactUs";
 import GiftCertificates from "./components/user/GiftCertificates";
-import LoginProfile from "./components/user/LoginProfile";
+import Login from "./components/user/Login";
 import Register from "./components/user/Register";
 import Profile from "./components/user/Profile";
 import ScheduleServices from "./components/user/ScheduleServices";

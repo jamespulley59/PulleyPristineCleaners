@@ -208,7 +208,7 @@ export default class Profile extends Component {
 
               <Link
                 className="btn btn-primary btn-block"
-                to={`/user/${this.props.match.params.uid}/Login`}
+                to={`/user/${this.props.match.params.uid}/ScheduleServices`}
               >
                 Schedule Service(s)
               </Link>
