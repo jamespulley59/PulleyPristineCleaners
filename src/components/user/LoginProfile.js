@@ -3,9 +3,51 @@ import { Link } from "react-router-dom";
 import discount from "../img/discount.jpg";
 
 export default class LoginProfile extends Component {
+  state = {
+    username: "",
+    password: "",
+    showAlert: false
+  };
+
+  onChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value,
+      showAlert: false
+    });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+    const { username, password } = this.state;
+    const user = {
+      username,
+      password
+    };
+    this.login(user);
+  };
+
+  login = async user => {
+    // this confirms user and password, or not
+    try {
+      const res = await axios.post("api/login", user);
+      this.props.history.push(`/user/${res.data._id}`);
+    } catch {
+      this.setState({
+        showAlert: true
+      });
+    }
+  };
+
   render() {
     return (
       <div>
+        {this.state.showAlert ? (
+          <div className="alert alert-danger">
+            Your username and password do not match our records, please try
+            again. If you are a new to Pulley's Pristine Clean, please complete
+            the entire registration for.
+          </div>
+        ) : null}
         {/* rows and columns to put username & password on the same line */}
         <div className="row">
           {/* text explaining page's purpose */}
@@ -18,6 +60,8 @@ export default class LoginProfile extends Component {
             <div className="form-group">
               <label>Username</label>
               <input
+                value={this.state.username}
+                onChange={this.onChange}
                 type="username"
                 className="form-control"
                 id="username"
@@ -96,7 +140,7 @@ export default class LoginProfile extends Component {
 
             {/* submit btn to DB */}
             <div className="btn btn-block">
-              <Link>Submit your information</Link>
+              <Link to="db">Submit your information</Link>
             </div>
           </div>
           {/* second col for img and client home info */}

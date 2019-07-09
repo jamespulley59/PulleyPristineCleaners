@@ -42,7 +42,6 @@ export default class GiftCertificates extends Component {
                       name="name"
                     />
                   </div>
-
                   <div className="form-group">
                     <label htmlFor="street">Street Address</label>
                     <input
@@ -53,7 +52,6 @@ export default class GiftCertificates extends Component {
                       name="street"
                     />
                   </div>
-
                   <div className="form-group">
                     <label htmlFor="csz">City, State, Zip</label>
                     <input
@@ -81,7 +79,6 @@ export default class GiftCertificates extends Component {
               />
             </div>
             <h4>To:</h4>
-
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -92,7 +89,6 @@ export default class GiftCertificates extends Component {
                 name="name"
               />
             </div>
-
             <div className="form-group">
               <label htmlFor="street">Street Address</label>
               <input
@@ -103,7 +99,6 @@ export default class GiftCertificates extends Component {
                 name="street"
               />
             </div>
-
             <div className="form-group">
               <label htmlFor="csz">City, State, Zip</label>
               <input
@@ -116,7 +111,6 @@ export default class GiftCertificates extends Component {
             </div>
           </div>
         </div>
-
         <div className="row pt-1">
           <div className="col-sm-4" />
 
@@ -137,7 +131,6 @@ export default class GiftCertificates extends Component {
 
           <div className="col-sm-4" />
         </div>
-
         <div className="gcb btn btn-block mb-4">
           <Link>Submit</Link>
         </div>
