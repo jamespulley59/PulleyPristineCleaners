@@ -14,6 +14,10 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
 app.use(cookieParser());
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5cdcf502d4c7cd3a9e846c18c7055f25d17927e7
 if (process.env.SESSION_SECRET) {
   app.use(
     session({
@@ -25,14 +29,21 @@ if (process.env.SESSION_SECRET) {
 } else {
   app.use(
     session({
+<<<<<<< HEAD
+      secret: "test",
+=======
       secret: "testLocal",
+>>>>>>> 5cdcf502d4c7cd3a9e846c18c7055f25d17927e7
       resave: true,
       saveUninitialized: true
     })
   );
 }
 
+<<<<<<< HEAD
+=======
 // passport lib
+>>>>>>> 5cdcf502d4c7cd3a9e846c18c7055f25d17927e7
 const passport = require("passport");
 
 app.use(passport.initialize());
@@ -41,7 +52,7 @@ app.use(passport.session());
 // Initialize bodyparser. We are turn on the feature to parse json data.
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-// Point static path to dist -- For building -- REMOVE
+// Point static path to build -- For building -- REMOVE
 app.use(express.static(path.join(__dirname, "build")));
 
 // CORS - Cross-Origin Resource Sharing
@@ -63,7 +74,6 @@ app.set("port", port);
 // Create HTTP server
 const server = http.createServer(app);
 
-//connect app.js
 require("./server/app")(app);
 
 // For Build: Catch all other routes and return the index file -- BUILDING

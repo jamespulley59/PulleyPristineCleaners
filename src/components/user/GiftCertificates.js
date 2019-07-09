@@ -15,15 +15,16 @@ export default class GiftCertificates extends Component {
           <br />
           <span />
         </div>
+
         <div className="row pt-1">
-          <div className="col-lg-6">
+          <div className="col-sm-6">
             <div className="text-center">
               <img
                 className="discount"
                 id="discount"
                 src={discount}
                 height={300}
-                width={375}
+                width={350}
                 alt=""
               />
             </div>
@@ -65,7 +66,8 @@ export default class GiftCertificates extends Component {
               </div>
             </section>
           </div>
-          <div className="col-lg-6">
+
+          <div className="col-sm-6">
             <div className="text-center pb-3">
               <img
                 className="gift"
@@ -110,8 +112,9 @@ export default class GiftCertificates extends Component {
           </div>
         </div>
         <div className="row pt-1">
-          <div className="col-lg-4" />
-          <div className="col-lg-4">
+          <div className="col-sm-4" />
+
+          <div className="col-sm-4">
             <div className="text-centerform-group">
               <label htmlFor="amount">
                 <h5>Amount:</h5>
@@ -125,7 +128,8 @@ export default class GiftCertificates extends Component {
               />
             </div>
           </div>
-          <div className="col-lg-4" />
+
+          <div className="col-sm-4" />
         </div>
         <div className="gcb btn btn-block mb-4">
           <Link>Submit</Link>
