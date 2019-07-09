@@ -7,7 +7,8 @@ import BeforeAndAfter from "./components/user/BeforeAndAfter";
 import Comments from "./components/user/Comments";
 import ContactUs from "./components/user/ContactUs";
 import GiftCertificates from "./components/user/GiftCertificates";
-import Login from "./components/user/Login";
+import LoginProfile from "./components/user/LoginProfile";
+import Register from "./components/user/Register";
 import Profile from "./components/user/Profile";
 import ScheduleServices from "./components/user/ScheduleServices";
 import Admin from "./components/administrator/Admin";
@@ -25,6 +26,8 @@ function App() {
       <div className="main-section">
         <Route exact path="/" component={Home} />
         <Route exact path="/Home" component={Home} />
+        <Route exact path="/Register" component={Register} />
+        <Route exact path="/Profile/:id" component={Profile} />
         <Route exact path="/BeforeAndAfter" component={BeforeAndAfter} />
         <Route exact path="/Comments" component={Comments} />
         <Route exact path="/ContactUs" component={ContactUs} />

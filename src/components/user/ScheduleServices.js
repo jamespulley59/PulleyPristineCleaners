@@ -318,12 +318,16 @@ export default class ScheduleServices extends Component {
               </li>
             </ul>
 
-            <Link
+            <button
               to="../administrator/Admin"
               className="btn btn-block btn-outline-primary ml-3"
             >
               <h2>Submit Your Order</h2>
-            </Link>
+            </button>
+            <h6>
+              Something special we should know? After submitting your order,
+              click on Comments at the top of the page.
+            </h6>
           </div>
           {/* <span className="col-lg-2" /> */}
           <div className="col-lg-4 text-center">
@@ -341,13 +345,9 @@ export default class ScheduleServices extends Component {
               className="img-fluid text-center p-5"
               src={discount}
               alt=""
-              width="300%"
-              height="1700%"
+              width="100%"
+              height="100%"
             />
-            <h6>
-              Something special we should know? After submitting your order,
-              click on Comments at the top of the page.
-            </h6>
           </div>
         </div>
       </div>
