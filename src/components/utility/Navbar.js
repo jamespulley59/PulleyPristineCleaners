@@ -6,6 +6,7 @@ export default class Navbar extends Component {
     return (
       <nav className="navbar navbar-dark">
         <Link to="/LoginProfile">Login</Link>
+        <Link to="/Register">Register</Link>
         <Link to="/ScheduleServices">Schedule Service(s)</Link>
         <Link to="/BeforeAndAfter">Before and After Photos</Link>
         <Link to="/GiftCertificates">Gift Certificates Available</Link>
