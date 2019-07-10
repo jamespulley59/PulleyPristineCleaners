@@ -204,8 +204,6 @@ export default class Profile extends Component {
                   onChange={this.onChange}
                 />
               </div>
-              {/* </div> link to get info to admin */}
-
               <Link
                 className="btn btn-primary btn-block"
                 to={`/user/${this.props.match.params.uid}/ScheduleServices`}
@@ -229,9 +227,10 @@ export default class Profile extends Component {
                 Logout
               </button>
             </div>
-
-            <div className="col-lg-4" />
+            {/* </div> link to get info to admin */}
           </div>
+
+          <div className="col-lg-4" />
         </form>
       </div>
     );
