@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default class Profile extends Component {
+  //what a user is
   state = {
     username: "",
     password: "",
