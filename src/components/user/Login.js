@@ -74,6 +74,8 @@ export default class Login extends Component {
                 className="form-control"
                 id="password"
                 placeholder="Please type your Password"
+                value={this.state.password}
+                onChange={this.onChange}
               />
             </div>
 

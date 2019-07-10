@@ -258,10 +258,7 @@ export default class Register extends Component {
             <medium>
               <span className="text-danger">*</span> fields are required.
             </medium>
-            <button
-              to="/Profile/:id"
-              className="btn btn-secondary btn-block mt-3"
-            >
+            <button className="btn btn-secondary btn-block mt-3">
               Submit your information
             </button>
           </div>

@@ -115,7 +115,7 @@ export default class GiftCertificates extends Component {
           <div className="col-sm-4" />
 
           <div className="col-sm-4">
-            <div className="text-centerform-group">
+            <div className="text-centerForm-group">
               <label htmlFor="amount">
                 <h5>Amount:</h5>
               </label>
@@ -132,7 +132,7 @@ export default class GiftCertificates extends Component {
           <div className="col-sm-4" />
         </div>
         <div className="gcb btn btn-block mb-4">
-          <Link>Submit</Link>
+          <Link to="../administrator/Admin/">Submit</Link>
         </div>
       </div>
     );

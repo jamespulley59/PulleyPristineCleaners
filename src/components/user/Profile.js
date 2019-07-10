@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default class Profile extends Component {
+  //what a user is
   state = {
     username: "",
     password: "",
@@ -204,7 +205,6 @@ export default class Profile extends Component {
                   onChange={this.onChange}
                 />
               </div>
-              {/* </div> link to get info to admin */}
 
               <Link
                 className="btn btn-primary btn-block"

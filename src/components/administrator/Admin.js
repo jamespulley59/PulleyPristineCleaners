@@ -1,33 +1,70 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 export default class Admin extends Component {
   render() {
     return (
       <div>
-        <div className="row">
-          <div classname="col-lg-3">
-            <h4>Client Name/Id? Including address, etc...</h4>
-            <input
-              type="client name"
-              className="form-control"
-              id="client name"
-            />
-          </div>
-          <div classname="col-lg-2">
-            <h2>Date of last svs/estimate</h2>
-            <input type="text" className="form-control" id="svs" />
-          </div>
-          <div classname="col-lg-7">
-            <h2>Last svs</h2>
-            <input type="text" className="form-control" id="last sevices" />
-          </div>
-          <div classname="col-lg-1">
-            <h2>Charge</h2>
-            <input type="text" className="form-control" id="charged" />
-          </div>
-        </div>
-        <Link to="AdminCalendar" />
+        <table className="table table-bordered ">
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Last service</th>
+              <th>Services</th>
+              <th>Charge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>James</td>
+              <td>6/30/2019</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, itaque.
+              </td>
+              <td>$110</td>
+            </tr>
+            <tr>
+              <td>James</td>
+              <td>6/30/2019</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, itaque.
+              </td>
+              <td>$110</td>
+            </tr>
+            <tr>
+              <td>James</td>
+              <td>6/30/2019</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, itaque.
+              </td>
+              <td>$110</td>
+            </tr>
+            <tr>
+              <td>James</td>
+              <td>6/30/2019</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, itaque.
+              </td>
+              <td>$110</td>
+            </tr>
+            <tr>
+              <td>James</td>
+              <td>6/30/2019</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, itaque.
+              </td>
+              <td>$110</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button className=" btn btn-block btn-primary" to="/AdminCalendar/">
+          AdminCalendar
+        </button>
       </div>
     );
   }
