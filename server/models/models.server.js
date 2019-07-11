@@ -1,4 +1,4 @@
-var connectionString = "mongodb://127.0.0.1:27017/pulleypristinecleaners"; // for local
+var connectionString = "mongodb://127.0.0.1:27017/pulleyspristineclean"; // for local
 
 if (process.env.MLAB_USERNAME_WEBDEV) {
   // check if running remotely

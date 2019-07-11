@@ -11,7 +11,9 @@ import axios from "axios";
 export default class Login extends Component {
   state = {
     username: "",
-    password: ""
+    password: "",
+    role: "",
+    showAlert: false
   };
 
   onChange = e => {
@@ -30,17 +32,21 @@ export default class Login extends Component {
     this.login(user);
   };
 
-  login = user => {
-    for (let item of this.props.users) {
-      if (item.username === user.username && item.password === user.password) {
-        this.props.history.push("/user/" + item._id);
-        return;
-      }
+  // this confirms user and password, or not
+  login = async user => {
+    try {
+      const res = await axios.post("api/login", user);
+      this.props.history.push(`/Profile/${res.data._id}`);
+    } catch {
+      this.setState({
+        showAlert: true
+      });
     }
     alert("Your username or password doesn't match or records");
   };
 
   render() {
+    const { username, password, role } = this.state;
     return (
       <div>
         {this.state.showAlert ? (
@@ -119,12 +125,20 @@ export default class Login extends Component {
                   onChange={this.onChange}
                 />
               </div>
-            </form>
-            <button className="btn btn-success btn-block">Login</button>
+              <button className="btn btn-primary btn-block">Login</button>
+              <Link className="btn btn-primary btn-block" to={`/register`}>
+                Register
+              </Link>
 
-            <Link className="btn btn-primary btn-block" to="/register/">
-              Register{" "}
-            </Link>
+              {role === "admin" ? (
+                <Link
+                  to="../administrator/Admin"
+                  className="btn btn-warning btn-block"
+                >
+                  Manage Users
+                </Link>
+              ) : null}
+            </form>
 
             <div>
               <img className="img-fluid mt-5" src={gift} alt="" />
