@@ -1,21 +1,24 @@
 module.exports = function(app) {
-  app.get("/api/user", () => {});
+  //app.get("/api/user", () => {});
 
   const passport = require("passport");
   const LocalStrategy = require("passport-local").Strategy;
-  const UserModel = require("../models/user/user.model");
+  const userModel = require("../models/user/user.model");
   const bcrypt = require("bcryptjs");
 
+  //encrypt password
   const salt = bcrypt.genSaltSync(10);
 
+  //saves data
   passport.serializeUser(serializeUser);
   function serializeUser(user, done) {
     done(null, user);
   }
 
+  //retrieves data
   passport.deserializeUser(deserializeUser);
   function deserializeUser(user, done) {
-    UserModel.findUserById(user._id).then(
+    userModel.findUserById(user._id).then(
       function(user) {
         done(null, user);
       },
@@ -25,7 +28,26 @@ module.exports = function(app) {
     );
   }
 
-  // login
+  // login uses local strategy
+  passport.use(new LocalStrategy(localStrategy));
+
+  async function localStrategy(username, password, done) {
+    //check if username is in db
+    const data = await userModel.findUserByUsername(username);
+    // check if encrypted passwords (hash) match
+    if (data && bcrypt.compareSync(password, data.password)) {
+      return done(null, data);
+      // check if password is encrypted
+    } else if (data && password === data.password) {
+      // encrypt password
+      data.password = bcrypt.hashSync(data.password, salt);
+      await userModel.updateUser(data);
+      return done(null, data);
+    } else {
+      return done(null, false);
+    }
+  }
+
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
     const user = req.user;
     res.json(user);
@@ -46,14 +68,14 @@ module.exports = function(app) {
   app.post("/api/register", async (req, res) => {
     const user = req.body;
     user.password = bcrypt.hashSync(user.password, salt);
-    const data = await UserModel.createUser(user);
+    const data = await userModel.createUser(user);
     req.login(data, () => {
       res.json(data);
     });
   });
 
   app.get("/api/users", async (req, res) => {
-    const data = await UserModel.findAllUsers();
+    const data = await userModel.findAllUsers();
     res.json(data);
   });
 

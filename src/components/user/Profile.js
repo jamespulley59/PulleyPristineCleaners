@@ -10,35 +10,60 @@ export default class Profile extends Component {
     email: "",
     name: "",
     oldUsername: "",
+    role: "",
+    address: "",
+    email: "",
+    number: "",
+    squareFootage: "",
+    bedrooms: "",
+    bathrooms: "",
     updateComplete: false,
-    usernameTaken: false,
-    role: ""
+    usernameTaken: false
   };
-  //   async componentDidMount() {
-  //     const isLoggedIn = await this.props.loggedIn();
-  //     if (isLoggedIn === 0) {
-  //       this.props.history.push("/login");
-  //       return;
-  //     }
+  async componentDidMount() {
+    const isLoggedIn = await this.props.loggedIn();
+    if (isLoggedIn === 0) {
+      this.props.history.push("/login");
+      return;
+    }
 
-  //     const uid = this.props.match.params.uid;
-  //     const res = await axios.get(`/api/user/${uid}`);
-  //     if (res.data) {
-  //       this.showUser(res.data);
-  //     } else {
-  //       alert("No user is found with given id");
-  //     }
-  //   }
+    const uid = this.props.match.params.uid;
+    const res = await axios.get(`/api/user/${uid}`);
+    if (res.data) {
+      this.showUser(res.data);
+    } else {
+      alert("No user is found with given id");
+    }
+  }
 
   showUser = user => {
-    const { username, password, email, name, role } = user;
+    const {
+      username,
+      password,
+      password2,
+      email,
+      name,
+      role,
+      address,
+      number,
+      squareFootage,
+      bedrooms,
+      bathrooms
+    } = user;
     this.setState({
       username,
       password,
       email,
       name,
       oldUsername: username,
-      role
+      role,
+      address,
+      number,
+      squareFootage,
+      bedrooms,
+      bathrooms,
+      password,
+      password2
     });
   };
 
@@ -52,7 +77,20 @@ export default class Profile extends Component {
 
   onSubmit = async e => {
     e.preventDefault();
-    const { username, password, email, name, oldUsername } = this.state;
+    const {
+      username,
+      password,
+      email,
+      name,
+      oldUsername,
+      role,
+      address,
+      number,
+      squareFootage,
+      bedrooms,
+      bathrooms,
+      password2
+    } = this.state;
     if (username !== oldUsername) {
       const res = await axios.get(`/api/user?username=${username}`);
       if (res.data) {
@@ -64,8 +102,15 @@ export default class Profile extends Component {
       _id: this.props.match.params.uid,
       username,
       password,
+      password2,
       email,
-      name
+      name,
+      role,
+      address,
+      number,
+      squareFootage,
+      bedrooms,
+      bathrooms
     };
     await axios.put("/api/user", newUser);
     this.setState({
@@ -79,7 +124,19 @@ export default class Profile extends Component {
   };
 
   render() {
-    const { username, email, name, role } = this.state;
+    const {
+      username,
+      email,
+      name,
+      address,
+      role,
+      number,
+      squareFootage,
+      bedrooms,
+      bathrooms,
+      password,
+      password2
+    } = this.state;
 
     return (
       <div>
@@ -94,122 +151,121 @@ export default class Profile extends Component {
           </div>
         )}
         <form id="profileForm" onSubmit={this.onSubmit}>
-          <div className="form-control">
-            <div className="row">
-              <div className="col-lg-4" />
+          <div className="row">
+            <div className="col-lg-4" />
 
-              <div className="col-lg-4">
-                <div className="form-group">
-                  <label htmlFor="username">Username</label>
-                  <input
-                    name="username"
-                    className="form-control"
-                    type="text"
-                    id="username"
-                    value={username}
-                    onChange={this.onChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={name}
-                    onChange={this.onChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="name">Name</label>
-                  <input
-                    type="name"
-                    className="form-control"
-                    id="name"
-                    name="name"
-                    value={name}
-                    onChange={this.onChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="password">Address</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={name}
-                    onChange={this.onChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="password">Phone Number</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={name}
-                    onChange={this.onChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="password">Bathrooms</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={name}
-                    onChange={this.onChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="password">Bedrooms</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={name}
-                    onChange={this.onChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="password">Square Footage</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={name}
-                    onChange={this.onChange}
-                  />
-                </div>
+            <div className="col-lg-4">
+              <div className="form-group">
+                <label htmlFor="username">Username</label>
+                <input
+                  name="username"
+                  className="form-control"
+                  type="text"
+                  id="username"
+                  value={username}
+                  onChange={this.onChange}
+                />
               </div>
+
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="password"
+                  name="password"
+                  value={password}
+                  onChange={this.onChange}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={this.onChange}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="name"
+                  className="form-control"
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={this.onChange}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="address">Address</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="address"
+                  name="address"
+                  value={address}
+                  onChange={this.onChange}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="number">Phone Number</label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="number"
+                  name="number"
+                  value={number}
+                  onChange={this.onChange}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="bathrooms">Bathrooms</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="bathrooms"
+                  name="bathrooms"
+                  value={bathrooms}
+                  onChange={this.onChange}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="bedrooms">Bedrooms</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="bedrooms"
+                  name="bedrooms"
+                  value={bedrooms}
+                  onChange={this.onChange}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="squareFootage">Square Footage</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="squareFootage"
+                  name="squareFootage"
+                  value={squareFootage}
+                  onChange={this.onChange}
+                />
+              </div>
+
               <Link
                 className="btn btn-primary btn-block"
-                to={`/user/${this.props.match.params.uid}/ScheduleServices`}
+                to="/ScheduleServices"
               >
                 Schedule Service(s)
               </Link>
@@ -225,12 +281,11 @@ export default class Profile extends Component {
               <button
                 type="button"
                 onClick={this.logout}
-                className="btn btn-danger btn-block"
+                className=" profilelogout btn btn-danger btn-block"
               >
                 Logout
               </button>
             </div>
-            {/* </div> link to get info to admin */}
           </div>
 
           <div className="col-lg-4" />

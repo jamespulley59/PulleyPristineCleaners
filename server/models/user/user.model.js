@@ -4,7 +4,6 @@ const UserModel = mongoose.model("UserModel", UserSchema);
 
 // crerate new user in mongoose
 UserModel.createUser = user => {
-  console.log(user);
   return UserModel.create(user);
 };
 
@@ -18,9 +17,24 @@ UserModel.findUserByUsername = username => {
   return UserModel.findOne({ username: username });
 };
 
-//let mongoose find user
+//let mongoose find user by id#
 UserModel.findUserById = uid => {
   return UserModel.findById(uid);
+};
+
+//change user info
+UserModel.updateUser = user => {
+  return UserModel.updateOne({ _id: user._id }, user);
+};
+
+//find all users
+UserModel.findAllUsers = () => {
+  return UserModel.find();
+};
+
+//delete user
+UserModel.deleteUser = id => {
+  return UserModel.deleteOne({ _id: id });
 };
 
 module.exports = UserModel;

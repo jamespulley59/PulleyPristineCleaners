@@ -9,6 +9,10 @@ export default class Register extends Component {
     username: "",
     password: "",
     password2: "",
+    address: "",
+    number: "",
+    email: "",
+    name: "",
     //if too short/don't match
     showUsernameAlert: false,
     showPasswordAlert: false,
@@ -26,9 +30,17 @@ export default class Register extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const { username, password, password2 } = this.state;
+    const {
+      username,
+      password,
+      password2,
+      address,
+      number,
+      email,
+      name
+    } = this.state;
 
-    this.register(username, password, password2);
+    this.register(username, password, password2, address, number, email, name);
   };
 
   async register(username, password, password2) {
@@ -75,7 +87,7 @@ export default class Register extends Component {
       };
 
       const res2 = await axios.post("/api/register", newUser);
-      this.props.history.push(`/Profile/${res2.data._id}`);
+      this.props.history.push(`/Profile`);
     }
   }
 
@@ -195,9 +207,9 @@ export default class Register extends Component {
                 <span className="text-danger">*</span> Phone Number
               </label>
               <input
-                type="address"
+                type="number"
                 className="form-control"
-                id="address"
+                id="number"
                 required
                 placeholder="Please type your phone number"
               />
@@ -252,10 +264,10 @@ export default class Register extends Component {
                 The Password must be at least 6 characters long.
               </div>
             )}
-            <medium>
+            <large>
               <span className="text-danger">*</span> fields are required.
-            </medium>
-            <button className="btn btn-secondary btn-block mt-3">
+            </large>
+            <button className="btn btn-primary btn-block mt-3">
               Submit your information
             </button>
           </div>
