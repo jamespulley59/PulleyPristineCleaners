@@ -46,7 +46,7 @@ export default class Login extends Component {
         {this.state.showAlert ? (
           <div className="alert alert-danger">
             Your username and password do not match our records, please try
-            again. If you are a new to Pulley's Pristine Clean, please complete
+            again. If you are new to Pulley's Pristine Clean, please complete
             the registration form.
           </div>
         ) : null}

@@ -14,21 +14,21 @@ export default class Profile extends Component {
     usernameTaken: false,
     role: ""
   };
-  //   async componentDidMount() {
-  //     const isLoggedIn = await this.props.loggedIn();
-  //     if (isLoggedIn === 0) {
-  //       this.props.history.push("/login");
-  //       return;
-  //     }
-
-  //     const uid = this.props.match.params.uid;
-  //     const res = await axios.get(`/api/user/${uid}`);
-  //     if (res.data) {
-  //       this.showUser(res.data);
-  //     } else {
-  //       alert("No user is found with given id");
-  //     }
+  // async componentDidMount() {
+  //   const isLoggedIn = await this.props.loggedIn();
+  //   if (isLoggedIn === 0) {
+  //     this.props.history.push("/login");
+  //     return;
   //   }
+
+  //   const uid = this.props.match.params.uid;
+  //   const res = await axios.get(`/api/user/${uid}`);
+  //   if (res.data) {
+  //     this.showUser(res.data);
+  //   } else {
+  //     alert("No user is found with given id");
+  //   }
+  // }
 
   showUser = user => {
     const { username, password, email, name, role } = user;
