@@ -12,6 +12,7 @@ export default class Login extends Component {
   state = {
     username: "",
     password: "",
+    role: "",
     showAlert: false
   };
 
@@ -36,7 +37,7 @@ export default class Login extends Component {
   login = async user => {
     try {
       const res = await axios.post("api/login", user);
-      this.props.history.push(`/user/${res.data._id}`);
+      this.props.history.push(`/Profile/${res.data._id}`);
     } catch {
       this.setState({
         showAlert: true
@@ -45,6 +46,7 @@ export default class Login extends Component {
   };
 
   render() {
+    const { username, password, role } = this.state;
     return (
       <div>
         {this.state.showAlert ? (
@@ -125,6 +127,15 @@ export default class Login extends Component {
               <Link className="btn btn-primary btn-block" to={`/register`}>
                 Register
               </Link>
+
+              {role === "admin" ? (
+                <Link
+                  to="../administrator/Admin"
+                  className="btn btn-warning btn-block"
+                >
+                  Manage Users
+                </Link>
+              ) : null}
             </form>
 
             <div>
