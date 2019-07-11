@@ -11,14 +11,12 @@ import axios from "axios";
 export default class Login extends Component {
   state = {
     username: "",
-    password: "",
-    showAlert: false
+    password: ""
   };
 
   onChange = e => {
     this.setState({
-      [e.target.name]: e.target.value,
-      showAlert: false
+      [e.target.name]: e.target.value
     });
   };
 
@@ -32,16 +30,14 @@ export default class Login extends Component {
     this.login(user);
   };
 
-  login = async user => {
-    // this confirms user and password, or not
-    try {
-      const res = await axios.post("api/login", user);
-      this.props.history.push(`/user/${res.data._id}`);
-    } catch {
-      this.setState({
-        showAlert: true
-      });
+  login = user => {
+    for (let item of this.props.users) {
+      if (item.username === user.username && item.password === user.password) {
+        this.props.history.push("/user/" + item._id);
+        return;
+      }
     }
+    alert("Your username or password doesn't match or records");
   };
 
   render() {
@@ -94,41 +90,39 @@ export default class Login extends Component {
           <div className="col-lg-4">
             <h5>
               If you are new to Pulley's Pristine Clean, please continue to our
-              registration page by clicking on the button below.
+              registration page by clicking on the button below. Otherwise,
+              please sign in with your username and password.
             </h5>
-            <div className="form-group">
-              <label>Username</label>
-              <input
-                value={this.state.username}
-                onChange={this.onChange}
-                name="username"
-                type="text"
-                id="username"
-                className="form-control"
-                placeholder="Please type your Username"
-              />
-            </div>
+            <form onSubmit={this.onSubmit}>
+              <div className="form-group">
+                <label>Username</label>
+                <input
+                  placeholder="Please type your Username"
+                  className="form-control"
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.onChange}
+                />
+              </div>
 
-            <div className="form-group">
-              <label>Password</label>
-              <input
-                type="password"
-                className="form-control"
-                id="password"
-                placeholder="Please type your Password"
-                value={this.state.password}
-                onChange={this.onChange}
-              />
-            </div>
+              <div className="form-group">
+                <label>Password</label>
+                <input
+                  placeholder="Please type your Password"
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.onChange}
+                />
+              </div>
+            </form>
+            <button className="btn btn-success btn-block">Login</button>
 
-            <Link className="btn btn-primary btn-block login" to="/profile/">
-              Login{" "}
-            </Link>
-
-            <Link
-              className="btn btn-primary btn-block register"
-              to="/register/"
-            >
+            <Link className="btn btn-primary btn-block" to="/register/">
               Register{" "}
             </Link>
 
