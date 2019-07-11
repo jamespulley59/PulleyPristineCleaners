@@ -20,9 +20,7 @@ export default class Register extends Component {
     this.setState({
       [e.target.name]: e.target.value,
       showUsernameAlert: false,
-      showPasswordAlert: false,
-      showUsernameLengthAlert: false,
-      showPasswordLengthAlert: false
+      showPasswordAlert: false
     });
   };
 
@@ -67,7 +65,6 @@ export default class Register extends Component {
       const newUser = {
         username,
         password,
-        password2,
         email: "",
         name: "",
         teleNumber: "",
@@ -157,7 +154,7 @@ export default class Register extends Component {
               to create your profile in our records. While you only need to do
               this once, you can always update your information later.
             </h4>
-            <h5>Required fields annotated are by a red dot.</h5>
+            <h5>Required fields are annotated by a red dot.</h5>
             <div className="form-group">
               <label>
                 <span className="text-danger">*</span> Name

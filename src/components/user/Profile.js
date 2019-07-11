@@ -94,116 +94,118 @@ export default class Profile extends Component {
           </div>
         )}
         <form id="profileForm" onSubmit={this.onSubmit}>
-          <div className="row">
-            <div className="col-lg-4" />
+          <div className="form-control">
+            <div className="row">
+              <div className="col-lg-4" />
 
-            <div className="col-lg-4">
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input
-                  name="username"
-                  className="form-control"
-                  type="text"
-                  id="username"
-                  value={username}
-                  onChange={this.onChange}
-                />
-              </div>
+              <div className="col-lg-4">
+                <div className="form-group">
+                  <label htmlFor="username">Username</label>
+                  <input
+                    name="username"
+                    className="form-control"
+                    type="text"
+                    id="username"
+                    value={username}
+                    onChange={this.onChange}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  value={name}
-                  onChange={this.onChange}
-                />
-              </div>
+                <div className="form-group">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    name="password"
+                    value={name}
+                    onChange={this.onChange}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  name="email"
-                  value={email}
-                  onChange={this.onChange}
-                />
-              </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    name="email"
+                    value={email}
+                    onChange={this.onChange}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input
-                  type="name"
-                  className="form-control"
-                  id="name"
-                  name="name"
-                  value={name}
-                  onChange={this.onChange}
-                />
-              </div>
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="name"
+                    className="form-control"
+                    id="name"
+                    name="name"
+                    value={name}
+                    onChange={this.onChange}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label htmlFor="password">Address</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  value={name}
-                  onChange={this.onChange}
-                />
-              </div>
+                <div className="form-group">
+                  <label htmlFor="password">Address</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    name="password"
+                    value={name}
+                    onChange={this.onChange}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label htmlFor="password">Phone Number</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  value={name}
-                  onChange={this.onChange}
-                />
-              </div>
+                <div className="form-group">
+                  <label htmlFor="password">Phone Number</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    name="password"
+                    value={name}
+                    onChange={this.onChange}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label htmlFor="password">Bathrooms</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  value={name}
-                  onChange={this.onChange}
-                />
-              </div>
+                <div className="form-group">
+                  <label htmlFor="password">Bathrooms</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    name="password"
+                    value={name}
+                    onChange={this.onChange}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label htmlFor="password">Bedrooms</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  value={name}
-                  onChange={this.onChange}
-                />
-              </div>
+                <div className="form-group">
+                  <label htmlFor="password">Bedrooms</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    name="password"
+                    value={name}
+                    onChange={this.onChange}
+                  />
+                </div>
 
-              <div className="form-group">
-                <label htmlFor="password">Square Footage</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  value={name}
-                  onChange={this.onChange}
-                />
+                <div className="form-group">
+                  <label htmlFor="password">Square Footage</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    name="password"
+                    value={name}
+                    onChange={this.onChange}
+                  />
+                </div>
               </div>
               <Link
                 className="btn btn-primary btn-block"

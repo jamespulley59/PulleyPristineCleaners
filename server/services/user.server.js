@@ -25,6 +25,24 @@ module.exports = function(app) {
     );
   }
 
+  // login
+  app.post("/api/login", passport.authenticate("local"), (req, res) => {
+    const user = req.user;
+    res.json(user);
+  });
+
+  // is user logged in?
+  app.get("/api/loggedIn", (req, res) => {
+    res.send(req.isAuthenticated() ? req.user : "0");
+  });
+
+  // to logOut
+  app.post("/api/logout", (req, res) => {
+    req.logOut();
+    res.sendStatus(200);
+  });
+
+  // register
   app.post("/api/register", async (req, res) => {
     const user = req.body;
     user.password = bcrypt.hashSync(user.password, salt);
@@ -36,6 +54,55 @@ module.exports = function(app) {
 
   app.get("/api/users", async (req, res) => {
     const data = await UserModel.findAllUsers();
+    res.json(data);
+  });
+
+  // name and password match? ok
+  app.get("/api/user", async (req, res) => {
+    const username = req.query["username"];
+    const password = req.query["password"];
+    let user;
+    if (username && password) {
+      user = await userModel.findUserByCredentials(username, password);
+    } else if (username) {
+      //create your own function name. findUserByUsername could be anything, like findUsername
+      user = await userModel.findUserByUsername(username);
+    }
+    res.json(user);
+  });
+
+  // retain new user info
+  app.post("/api/user", async (req, res) => {
+    const user = req.body;
+    const data = await userModel.createUser(user);
+
+    res.json(data);
+  });
+
+  // Find user by _id
+  app.get("/api/user/:uid", async (req, res) => {
+    const uid = req.params["uid"];
+    let user;
+    user = await userModel.findUserById(uid);
+    res.json(user);
+  });
+
+  // change user info
+  app.put("/api/user", async (req, res) => {
+    const newUser = req.body;
+    const data = await userModel.updateUser(newUser);
+    res.json(data);
+  });
+  //find all users
+  app.get("/api/users", async (req, res) => {
+    const data = await userModel.findAllUsers();
+    res.json(data);
+  });
+
+  //delete
+  app.delete("/api/user/:id", async (req, res) => {
+    const id = req.params["id"];
+    const data = await userModel.deleteUser(id);
     res.json(data);
   });
 };

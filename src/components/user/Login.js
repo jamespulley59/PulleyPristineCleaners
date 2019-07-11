@@ -32,8 +32,8 @@ export default class Login extends Component {
     this.login(user);
   };
 
+  // this confirms user and password, or not
   login = async user => {
-    // this confirms user and password, or not
     try {
       const res = await axios.post("api/login", user);
       this.props.history.push(`/user/${res.data._id}`);
@@ -96,41 +96,36 @@ export default class Login extends Component {
               If you are new to Pulley's Pristine Clean, please continue to our
               registration page by clicking on the button below.
             </h5>
-            <div className="form-group">
-              <label>Username</label>
-              <input
-                value={this.state.username}
-                onChange={this.onChange}
-                name="username"
-                type="text"
-                id="username"
-                className="form-control"
-                placeholder="Please type your Username"
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Password</label>
-              <input
-                type="password"
-                className="form-control"
-                id="password"
-                placeholder="Please type your Password"
-                value={this.state.password}
-                onChange={this.onChange}
-              />
-            </div>
-
-            <Link className="btn btn-primary btn-block login" to="/profile/">
-              Login{" "}
-            </Link>
-
-            <Link
-              className="btn btn-primary btn-block register"
-              to="/register/"
-            >
-              Register{" "}
-            </Link>
+            <form onSubmit={this.onSubmit}>
+              <div className="form-group">
+                <label>Username</label>
+                <input
+                  value={this.state.username}
+                  onChange={this.onChange}
+                  name="username"
+                  type="text"
+                  id="username"
+                  className="form-control"
+                  placeholder="Please type your Username"
+                />
+              </div>
+              <div className="form-group">
+                <label>Password</label>
+                <input
+                  name="password"
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  placeholder="Please type your Password"
+                  value={this.state.password}
+                  onChange={this.onChange}
+                />
+              </div>
+              <button className="btn btn-primary btn-block">Login</button>
+              <Link className="btn btn-primary btn-block" to={`/register`}>
+                Register
+              </Link>
+            </form>
 
             <div>
               <img className="img-fluid mt-5" src={gift} alt="" />
