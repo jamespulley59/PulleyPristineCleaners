@@ -139,11 +139,6 @@ export default class Login extends Component {
                 </Link>
               ) : null}
             </form>
-            <button className="btn btn-success btn-block">Login</button>
-
-            <Link className="btn btn-primary btn-block" to="/register/">
-              Register{" "}
-            </Link>
 
             <div>
               <img className="img-fluid mt-5" src={gift} alt="" />
