@@ -11,14 +11,12 @@ import axios from "axios";
 export default class Login extends Component {
   state = {
     username: "",
-    password: "",
-    showAlert: false
+    password: ""
   };
 
   onChange = e => {
     this.setState({
-      [e.target.name]: e.target.value,
-      showAlert: false
+      [e.target.name]: e.target.value
     });
   };
 
@@ -42,6 +40,7 @@ export default class Login extends Component {
         showAlert: true
       });
     }
+    alert("Your username or password doesn't match or records");
   };
 
   render() {
@@ -94,38 +93,41 @@ export default class Login extends Component {
           <div className="col-lg-4">
             <h5>
               If you are new to Pulley's Pristine Clean, please continue to our
-              registration page by clicking on the button below.
+              registration page by clicking on the button below. Otherwise,
+              please sign in with your username and password.
             </h5>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <label>Username</label>
                 <input
-                  value={this.state.username}
-                  onChange={this.onChange}
-                  name="username"
+                  placeholder="Please type your Username"
+                  className="form-control"
                   type="text"
                   id="username"
-                  className="form-control"
-                  placeholder="Please type your Username"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.onChange}
                 />
               </div>
+
               <div className="form-group">
                 <label>Password</label>
                 <input
-                  name="password"
+                  placeholder="Please type your Password"
                   type="password"
                   className="form-control"
                   id="password"
-                  placeholder="Please type your Password"
+                  name="password"
                   value={this.state.password}
                   onChange={this.onChange}
                 />
               </div>
-              <button className="btn btn-primary btn-block">Login</button>
-              <Link className="btn btn-primary btn-block" to={`/register`}>
-                Register
-              </Link>
             </form>
+            <button className="btn btn-success btn-block">Login</button>
+
+            <Link className="btn btn-primary btn-block" to="/register/">
+              Register{" "}
+            </Link>
 
             <div>
               <img className="img-fluid mt-5" src={gift} alt="" />
