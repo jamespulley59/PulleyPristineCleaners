@@ -36,15 +36,6 @@ export default class Profile extends Component {
     }
   }
 
-  //   const uid = this.props.match.params.uid;
-  //   const res = await axios.get(`/api/user/${uid}`);
-  //   if (res.data) {
-  //     this.showUser(res.data);
-  //   } else {
-  //     alert("No user is found with given id");
-  //   }
-  // }
-
   showUser = user => {
     const {
       username,
@@ -149,16 +140,6 @@ export default class Profile extends Component {
 
     return (
       <div>
-        {this.state.updateComplete && (
-          <div className="alert alert-success">
-            Your update was completed successfully
-          </div>
-        )}
-        {this.state.usernameTaken && (
-          <div className="alert alert-danger">
-            Username is taken, please try another
-          </div>
-        )}
         <form id="profileForm" onSubmit={this.onSubmit}>
           <div className="row">
             <div className="col-lg-4" />
@@ -286,7 +267,23 @@ export default class Profile extends Component {
                   Manage Users
                 </Link>
               ) : null}
-
+              {this.state.updateComplete && (
+                <div className="alert alert-success">
+                  Your update was completed successfully
+                </div>
+              )}
+              {this.state.usernameTaken && (
+                <div className="alert alert-danger">
+                  Username is taken, please try another
+                  <button
+                    type="button"
+                    onClick={this.onChange}
+                    className="btn btn-warning btn-block"
+                  >
+                    Submit
+                  </button>
+                </div>
+              )}
               <button
                 type="button"
                 onClick={this.logout}
