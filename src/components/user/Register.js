@@ -215,7 +215,6 @@ export default class Register extends Component {
               <input
                 type="email"
                 className="form-control"
-                required
                 id="email"
                 name="email"
                 required
