@@ -87,7 +87,7 @@ export default class Register extends Component {
       };
 
       const res2 = await axios.post("/api/register", newUser);
-      this.props.history.push(`/Profile`);
+      this.props.history.push(`/Profile/:uid`);
     }
   }
 
@@ -114,7 +114,7 @@ export default class Register extends Component {
                 id="username"
                 name="username"
                 required
-                // value={username}
+                value={username}
                 onChange={this.onChange}
               />
             </div>

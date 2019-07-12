@@ -41,7 +41,7 @@ class App extends Component {
           <Route exact path="/Register" component={Register} />
           <Route
             exact
-            path="/Profile/:id"
+            path="/Profile/:uid"
             render={props => <Profile {...props} loggedIn={this.loggedIn} />}
           />
           {/* Admin */}
