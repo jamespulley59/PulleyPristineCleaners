@@ -215,7 +215,6 @@ export default class Register extends Component {
               <input
                 type="email"
                 className="form-control"
-                required
                 id="email"
                 name="email"
                 required
@@ -280,7 +279,6 @@ export default class Register extends Component {
                 type="number"
                 className="form-control"
                 id="square feet"
-                name="password2"
                 name="squareFootage"
                 placeholder="Square footage"
                 onChange={this.onChange}
