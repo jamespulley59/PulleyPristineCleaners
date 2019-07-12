@@ -12,7 +12,6 @@ export default class Profile extends Component {
     oldUsername: "",
     role: "",
     address: "",
-    email: "",
     number: "",
     squareFootage: "",
     bedrooms: "",
@@ -61,9 +60,7 @@ export default class Profile extends Component {
       number,
       squareFootage,
       bedrooms,
-      bathrooms,
-      password,
-      password2
+      bathrooms
     });
   };
 
@@ -140,6 +137,16 @@ export default class Profile extends Component {
 
     return (
       <div>
+        {this.state.updateComplete && (
+          <div className="alert alert-success">
+            Your update was completed successfully
+          </div>
+        )}
+        {this.state.usernameTaken && (
+          <div className="alert alert-danger">
+            Username is taken, please try another
+          </div>
+        )}
         <form id="profileForm" onSubmit={this.onSubmit}>
           <div className="row">
             <div className="col-lg-4" />
@@ -216,7 +223,6 @@ export default class Profile extends Component {
                   onChange={this.onChange}
                 />
               </div>
-
               <div className="form-group">
                 <label htmlFor="bathrooms">Bathrooms</label>
                 <input
@@ -253,12 +259,6 @@ export default class Profile extends Component {
                 />
               </div>
 
-              <Link
-                className="btn btn-primary btn-block"
-                to="/ScheduleServices"
-              >
-                Schedule Service(s)
-              </Link>
               {role === "admin" ? (
                 <Link
                   to="../administrator/Admin"
@@ -267,23 +267,14 @@ export default class Profile extends Component {
                   Manage Users
                 </Link>
               ) : null}
-              {this.state.updateComplete && (
-                <div className="alert alert-success">
-                  Your update was completed successfully
-                </div>
-              )}
-              {this.state.usernameTaken && (
-                <div className="alert alert-danger">
-                  Username is taken, please try another
-                  <button
-                    type="button"
-                    onClick={this.onChange}
-                    className="btn btn-warning btn-block"
-                  >
-                    Submit
-                  </button>
-                </div>
-              )}
+              <button
+                type="button"
+                onClick={this.onChange}
+                className="btn btn-warning btn-block"
+              >
+                Update
+              </button>
+
               <button
                 type="button"
                 onClick={this.logout}
