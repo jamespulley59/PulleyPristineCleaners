@@ -47,7 +47,7 @@ class App extends Component {
           {/* Admin */}
           <Route
             exact
-            path="/Admin"
+            path="/administrator/Admin"
             render={props => <Admin {...props} loggedIn={this.loggedIn} />}
           />
           <Route exact path="/AdminCalendar" component={AdminCalendar} />

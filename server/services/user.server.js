@@ -4,8 +4,8 @@ module.exports = function(app) {
   const passport = require("passport");
   const LocalStrategy = require("passport-local").Strategy;
   const userModel = require("../models/user/user.model");
+  // library to encode passport
   const bcrypt = require("bcryptjs");
-
   //encrypt password
   const salt = bcrypt.genSaltSync(10);
 
