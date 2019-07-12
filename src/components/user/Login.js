@@ -42,20 +42,12 @@ export default class Login extends Component {
         showAlert: true
       });
     }
-    alert("Your username or password doesn't match or records");
   };
 
   render() {
     const { username, password, role } = this.state;
     return (
       <div>
-        {this.state.showAlert ? (
-          <div className="alert alert-danger">
-            Your username and password do not match our records, please try
-            again. If you are a new to Pulley's Pristine Clean, please complete
-            the registration form.
-          </div>
-        ) : null}
         {/* rows and columns to put username & password on the same line */}
 
         <div className="row">
@@ -125,6 +117,13 @@ export default class Login extends Component {
                   onChange={this.onChange}
                 />
               </div>
+              {this.state.showAlert ? (
+                <div className="alert alert-danger">
+                  Your username and password do not match our records, please
+                  try again. If you are a new to Pulley's Pristine Clean, please
+                  complete the registration form.
+                </div>
+              ) : null}
               <button className="btn btn-primary btn-block">Login</button>
               <Link className="btn btn-primary btn-block" to={`/register`}>
                 Register

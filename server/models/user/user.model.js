@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const UserSchema = require("./user.schema");
 const UserModel = mongoose.model("UserModel", UserSchema);
 
-// crerate new user in mongoose
+// create new user in mongoose
 UserModel.createUser = user => {
   return UserModel.create(user);
 };

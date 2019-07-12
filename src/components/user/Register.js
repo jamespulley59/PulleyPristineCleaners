@@ -13,6 +13,9 @@ export default class Register extends Component {
     number: "",
     email: "",
     name: "",
+    bedrooms: "",
+    bathrooms: "",
+    squareFootage: "",
     //if too short/don't match
     showUsernameAlert: false,
     showPasswordAlert: false,
@@ -37,13 +40,38 @@ export default class Register extends Component {
       address,
       number,
       email,
-      name
+      name,
+      bedrooms,
+      bathrooms,
+      squareFootage
     } = this.state;
 
-    this.register(username, password, password2, address, number, email, name);
+    this.register(
+      username,
+      password,
+      password2,
+      address,
+      number,
+      email,
+      name,
+      bedrooms,
+      bathrooms,
+      squareFootage
+    );
   };
 
-  async register(username, password, password2) {
+  async register(
+    username,
+    password,
+    password2,
+    address,
+    number,
+    email,
+    name,
+    bedrooms,
+    bathrooms,
+    squareFootage
+  ) {
     // username minimum length
     if (username.length < 5) {
       this.setState({
@@ -77,22 +105,21 @@ export default class Register extends Component {
       const newUser = {
         username,
         password,
-        email: "",
-        name: "",
-        teleNumber: "",
-        address: "",
-        bedrooms: "",
-        bathrooms: "",
-        squareFootage: ""
+        email,
+        name,
+        number,
+        address,
+        bedrooms,
+        bathrooms,
+        squareFootage
       };
 
       const res2 = await axios.post("/api/register", newUser);
-      this.props.history.push(`/Profile`);
+      this.props.history.push(`/Profile/${res2.data._id}`);
     }
   }
 
   render() {
-    const { username, password, password2 } = this.state;
     return (
       <div>
         <h1 className="text-center pb-3">Register</h1>
@@ -175,7 +202,10 @@ export default class Register extends Component {
                 type="name"
                 className="form-control"
                 id="name"
+                name="name"
+                required
                 placeholder="Please type your full name"
+                onChange={this.onChange}
               />
             </div>
             <div className="form-group">
@@ -187,7 +217,10 @@ export default class Register extends Component {
                 className="form-control"
                 required
                 id="email"
+                name="email"
+                required
                 placeholder="Please type your Email"
+                onChange={this.onChange}
               />
             </div>
             <div className="form-group">
@@ -198,8 +231,10 @@ export default class Register extends Component {
                 type="address"
                 className="form-control"
                 id="address"
+                name="address"
                 required
                 placeholder="Please type your full address"
+                onChange={this.onChange}
               />
             </div>
             <div className="form-group">
@@ -210,8 +245,10 @@ export default class Register extends Component {
                 type="number"
                 className="form-control"
                 id="number"
+                name="number"
                 required
                 placeholder="Please type your phone number"
+                onChange={this.onChange}
               />
             </div>
             <h4 className="text-center">Please tell us about your home</h4>
@@ -221,7 +258,9 @@ export default class Register extends Component {
                 type="text"
                 className="form-control"
                 id="bathrooms"
+                name="bathrooms"
                 placeholder="Bathrooms"
+                onChange={this.onChange}
               />
             </div>
             <div className="client-homeinfo pb-2">
@@ -230,7 +269,9 @@ export default class Register extends Component {
                 type="text"
                 className="form-control"
                 id="bedrooms"
+                name="bedrooms"
                 placeholder="Bedrooms"
+                onChange={this.onChange}
               />
             </div>
             <div className="client-homeinfo1">
@@ -239,7 +280,10 @@ export default class Register extends Component {
                 type="number"
                 className="form-control"
                 id="square feet"
+                name="password2"
+                name="squareFootage"
                 placeholder="Square footage"
+                onChange={this.onChange}
               />
             </div>
 

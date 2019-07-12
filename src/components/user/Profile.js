@@ -6,7 +6,6 @@ export default class Profile extends Component {
   //what a user is
   state = {
     username: "",
-    password: "",
     email: "",
     name: "",
     oldUsername: "",
@@ -20,6 +19,8 @@ export default class Profile extends Component {
     updateComplete: false,
     usernameTaken: false
   };
+
+  // check if user is logged
   async componentDidMount() {
     const isLoggedIn = await this.props.loggedIn();
     if (isLoggedIn === 0) {
@@ -31,16 +32,13 @@ export default class Profile extends Component {
     const res = await axios.get(`/api/user/${uid}`);
     if (res.data) {
       this.showUser(res.data);
-    } else {
-      alert("No user is found with given id");
     }
   }
 
+  // user info
   showUser = user => {
     const {
       username,
-      password,
-      password2,
       email,
       name,
       role,
@@ -52,7 +50,6 @@ export default class Profile extends Component {
     } = user;
     this.setState({
       username,
-      password,
       email,
       name,
       oldUsername: username,
@@ -61,25 +58,26 @@ export default class Profile extends Component {
       number,
       squareFootage,
       bedrooms,
-      bathrooms,
-      password,
-      password2
+      bathrooms
     });
   };
 
+  //accepting changes to profile
   onChange = e => {
     this.setState({
       [e.target.name]: e.target.value,
       updateComplete: false,
       usernameTaken: false
     });
+    return;
   };
 
+  // check if username is taken
   onSubmit = async e => {
     e.preventDefault();
     const {
       username,
-      password,
+
       email,
       name,
       oldUsername,
@@ -88,9 +86,9 @@ export default class Profile extends Component {
       number,
       squareFootage,
       bedrooms,
-      bathrooms,
-      password2
+      bathrooms
     } = this.state;
+    // accept new username
     if (username !== oldUsername) {
       const res = await axios.get(`/api/user?username=${username}`);
       if (res.data) {
@@ -98,11 +96,12 @@ export default class Profile extends Component {
         return;
       }
     }
+
+    // accepting new user info
     const newUser = {
       _id: this.props.match.params.uid,
       username,
-      password,
-      password2,
+
       email,
       name,
       role,
@@ -133,9 +132,7 @@ export default class Profile extends Component {
       number,
       squareFootage,
       bedrooms,
-      bathrooms,
-      password,
-      password2
+      bathrooms
     } = this.state;
 
     return (
@@ -163,18 +160,6 @@ export default class Profile extends Component {
                   type="text"
                   id="username"
                   value={username}
-                  onChange={this.onChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  value={password}
                   onChange={this.onChange}
                 />
               </div>
