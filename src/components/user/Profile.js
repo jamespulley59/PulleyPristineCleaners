@@ -11,7 +11,6 @@ export default class Profile extends Component {
     oldUsername: "",
     role: "",
     address: "",
-    email: "",
     number: "",
     squareFootage: "",
     bedrooms: "",
@@ -211,7 +210,6 @@ export default class Profile extends Component {
                   onChange={this.onChange}
                 />
               </div>
-
               <div className="form-group">
                 <label htmlFor="bathrooms">Bathrooms</label>
                 <input
@@ -248,12 +246,6 @@ export default class Profile extends Component {
                 />
               </div>
 
-              <Link
-                className="btn btn-primary btn-block"
-                to="/ScheduleServices"
-              >
-                Schedule Service(s)
-              </Link>
               {role === "admin" ? (
                 <Link
                   to="../administrator/Admin"
@@ -262,6 +254,13 @@ export default class Profile extends Component {
                   Manage Users
                 </Link>
               ) : null}
+              <button
+                type="button"
+                onClick={this.onChange}
+                className="btn btn-warning btn-block"
+              >
+                Update
+              </button>
 
               <button
                 type="button"
