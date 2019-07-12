@@ -36,13 +36,12 @@ export default class Login extends Component {
   login = async user => {
     try {
       const res = await axios.post("api/login", user);
-      this.props.history.push(`/Profile/${res.data._id}`);
+      this.props.history.push(`/user/${res.data._id}`);
     } catch {
       this.setState({
         showAlert: true
       });
     }
-    alert("Your username or password doesn't match or records");
   };
 
   render() {
