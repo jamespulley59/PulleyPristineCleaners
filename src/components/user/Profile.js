@@ -11,7 +11,7 @@ export default class Profile extends Component {
     oldUsername: "",
     role: "",
     address: "",
-    number: "",
+    telephone: "",
     squareFootage: "",
     bedrooms: "",
     bathrooms: "",
@@ -42,7 +42,7 @@ export default class Profile extends Component {
       name,
       role,
       address,
-      number,
+      telephone,
       squareFootage,
       bedrooms,
       bathrooms
@@ -54,7 +54,7 @@ export default class Profile extends Component {
       oldUsername: username,
       role,
       address,
-      number,
+      telephone,
       squareFootage,
       bedrooms,
       bathrooms
@@ -76,13 +76,12 @@ export default class Profile extends Component {
     e.preventDefault();
     const {
       username,
-
       email,
       name,
       oldUsername,
       role,
       address,
-      number,
+      telephone,
       squareFootage,
       bedrooms,
       bathrooms
@@ -100,12 +99,11 @@ export default class Profile extends Component {
     const newUser = {
       _id: this.props.match.params.uid,
       username,
-
       email,
       name,
       role,
       address,
-      number,
+      telephone,
       squareFootage,
       bedrooms,
       bathrooms
@@ -128,7 +126,7 @@ export default class Profile extends Component {
       name,
       address,
       role,
-      number,
+      telephone,
       squareFootage,
       bedrooms,
       bathrooms
@@ -136,16 +134,6 @@ export default class Profile extends Component {
 
     return (
       <div>
-        {this.state.updateComplete && (
-          <div className="alert alert-success">
-            Your update was completed successfully
-          </div>
-        )}
-        {this.state.usernameTaken && (
-          <div className="alert alert-danger">
-            Username is taken, please try another
-          </div>
-        )}
         <form id="profileForm" onSubmit={this.onSubmit}>
           <div className="row">
             <div className="col-lg-4" />
@@ -200,13 +188,13 @@ export default class Profile extends Component {
               </div>
 
               <div className="form-group">
-                <label htmlFor="number">Phone Number</label>
+                <label htmlFor="telephone">Phone Number</label>
                 <input
                   type="number"
                   className="form-control"
-                  id="number"
-                  name="number"
-                  value={number}
+                  id="telephone"
+                  name="telephone"
+                  value={telephone}
                   onChange={this.onChange}
                 />
               </div>
@@ -254,9 +242,19 @@ export default class Profile extends Component {
                   Manage Users
                 </Link>
               ) : null}
+              {this.state.updateComplete && (
+                <div className="alert alert-success">
+                  Your update was completed successfully
+                </div>
+              )}
+              {this.state.usernameTaken && (
+                <div className="alert alert-danger">
+                  Username is taken, please try another
+                </div>
+              )}
               <button
                 type="button"
-                onClick={this.onChange}
+                onClick={this.onSubmit}
                 className="btn btn-warning btn-block"
               >
                 Update

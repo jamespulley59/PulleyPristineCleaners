@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import gift from "../img/gift.jpg";
 import discount from "../img/discount.jpg";
 
@@ -17,7 +16,7 @@ export default class GiftCertificates extends Component {
         </div>
 
         <div className="row pt-1">
-          <div className="col-sm-6">
+          <div className="col-lg-6">
             <div className="text-center">
               <img
                 className="discount"
@@ -67,7 +66,7 @@ export default class GiftCertificates extends Component {
             </section>
           </div>
 
-          <div className="col-sm-6">
+          <div className="col-lg-6">
             <div className="text-center pb-3">
               <img
                 className="gift"
@@ -112,9 +111,9 @@ export default class GiftCertificates extends Component {
           </div>
         </div>
         <div className="row pt-1">
-          <div className="col-sm-4" />
+          <div className="col-lg-4" />
 
-          <div className="col-sm-4">
+          <div className="col-lg-4">
             <div className="text-centerForm-group">
               <label htmlFor="amount">
                 <h5>Amount:</h5>
@@ -126,13 +125,14 @@ export default class GiftCertificates extends Component {
                 id="amount"
                 name="amount"
               />
+
+              <div className="text-align: center">
+                <button className="gcb btn-primary mt-3">Submit</button>
+              </div>
             </div>
           </div>
 
-          <div className="col-sm-4" />
-        </div>
-        <div className="gcb btn btn-block mb-4">
-          <Link to="../administrator/Admin/">Submit</Link>
+          <div className="col-lg-4" />
         </div>
       </div>
     );

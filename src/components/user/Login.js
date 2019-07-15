@@ -12,6 +12,7 @@ export default class Login extends Component {
   state = {
     username: "",
     password: "",
+    role: "",
     showAlert: false
   };
 
@@ -23,10 +24,11 @@ export default class Login extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const { username, password } = this.state;
+    const { username, password, role } = this.state;
     const user = {
       username,
-      password
+      password,
+      role
     };
     this.login(user);
   };
@@ -44,7 +46,7 @@ export default class Login extends Component {
   };
 
   render() {
-    const { username, password } = this.state;
+    const { username, password, role } = this.state;
 
     return (
       <div>
@@ -129,14 +131,14 @@ export default class Login extends Component {
                 Register
               </Link>
 
-              {/* {role === "admin" ? (
+              {role === "admin" ? (
                 <Link
                   to="../administrator/Admin"
                   className="btn btn-warning btn-block"
                 >
                   Manage Users
                 </Link>
-              ) : null} */}
+              ) : null}
             </form>
 
             <div>

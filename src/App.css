@@ -104,9 +104,6 @@ body {
   margin-bottom: 50px;
 }
 
-#gift {
-}
-
 #discount {
   margin-top: 25px;
   margin-bottom: 22px;
@@ -134,7 +131,12 @@ body {
 }
 /* Gift Cert page Submit button */
 .gcb {
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 25%;
+  position: relative;
+  text-align: center;
+  border-color: dodgerblue;
 }
 
 /* schedule */

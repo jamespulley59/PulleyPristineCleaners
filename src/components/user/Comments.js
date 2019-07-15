@@ -42,7 +42,7 @@ export default class Comments extends Component {
               max-length="400"
             />
             <div className="text-center Comment-btn pt-2 pb-5">
-              <Link className="btn-outline" to="./administrator/Admin">
+              <Link className="btn-primary" to="./administrator/Admin">
                 Submit your comments
               </Link>
             </div>

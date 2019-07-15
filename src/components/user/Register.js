@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import discount from "../img/discount.jpg";
 import axios from "axios";
 
@@ -10,7 +9,7 @@ export default class Register extends Component {
     password: "",
     password2: "",
     address: "",
-    number: "",
+    telephone: "",
     email: "",
     name: "",
     bedrooms: "",
@@ -38,7 +37,7 @@ export default class Register extends Component {
       password,
       password2,
       address,
-      number,
+      telephone,
       email,
       name,
       bedrooms,
@@ -51,7 +50,7 @@ export default class Register extends Component {
       password,
       password2,
       address,
-      number,
+      telephone,
       email,
       name,
       bedrooms,
@@ -65,7 +64,7 @@ export default class Register extends Component {
     password,
     password2,
     address,
-    number,
+    telephone,
     email,
     name,
     bedrooms,
@@ -107,7 +106,7 @@ export default class Register extends Component {
         password,
         email,
         name,
-        number,
+        telephone,
         address,
         bedrooms,
         bathrooms,
@@ -243,8 +242,8 @@ export default class Register extends Component {
               <input
                 type="number"
                 className="form-control"
-                id="number"
-                name="number"
+                id="telephone"
+                name="telephone"
                 required
                 placeholder="Please type your phone number"
                 onChange={this.onChange}

@@ -16,7 +16,7 @@ export default class ContactUs extends Component {
         </div>
 
         <div className="row">
-          <div className="col-4">
+          <div className="col-lg-4">
             <h3>Would you like us to contact you?</h3>
             <div className="form-group">
               <label>Your name</label>
@@ -65,7 +65,7 @@ export default class ContactUs extends Component {
             </div>
           </div>
 
-          <div className="col-4 pt-5">
+          <div className="col-lg-4 pt-5">
             <div className="text-center">
               <img
                 className="img-fluid text-center"
@@ -77,7 +77,7 @@ export default class ContactUs extends Component {
             </div>
           </div>
 
-          <div className="col-4">
+          <div className="col-lg-4">
             <h2>Or would you like to contact us?</h2>
             <br />
             <h5>Call us at:</h5>
