@@ -236,12 +236,13 @@ export default class Profile extends Component {
 
               {role === "admin" ? (
                 <Link
-                  to="../administrator/Admin"
-                  className="btn btn-warning btn-block"
+                  to="../administrator/UserManage"
+                  className="btn btn-success btn-block"
                 >
                   Manage Users
                 </Link>
               ) : null}
+
               {this.state.updateComplete && (
                 <div className="alert alert-success">
                   Your update was completed successfully

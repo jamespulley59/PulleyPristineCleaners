@@ -12,7 +12,7 @@ import Register from "./components/user/Register";
 import Profile from "./components/user/Profile";
 import ScheduleServices from "./components/user/ScheduleServices";
 import Admin from "./components/administrator/Admin";
-import Manage from "./components/administrator/Manage";
+import UserManage from "./components/administrator/Manage";
 import AdminCalendar from "./components/administrator/AdminCalendar";
 import Header from "./components/utility/Header";
 import Navbar from "./components/utility/Navbar";
@@ -51,8 +51,8 @@ class App extends Component {
             render={props => <Admin {...props} loggedIn={this.loggedIn} />}
           />
           <Route exact path="/AdminCalendar" component={AdminCalendar} />
-          <Route exact path="/Manage" component={Manage} />
-          {/* Else */}
+          <Route exact path="/UserManage" render={props => UserManage} />
+
           <Route exact path="/BeforeAndAfter" component={BeforeAndAfter} />
           <Route
             exact

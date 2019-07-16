@@ -60,22 +60,22 @@ export default class ScheduleServices extends Component {
     console.log(this.state.services);
   };
 
-  // changeSearch = async e => {
-  //   await this.setState({
-  //     [e.target.name]: e.target.value
-  //   });
-  //   this.filterChooseServiceByName(this.state.searchInput);
-  // };
+  changeSearch = async e => {
+    await this.setState({
+      [e.target.name]: e.target.value
+    });
+    this.filterChooseServiceByName(this.state.searchInput);
+  };
 
-  // filterChooseServiceByName = text => {
-  //   let chooseService = this.state.services;
-  //   chooseService = chooseService.filter(service =>
-  //     service.name.includes(text)
-  //   );
-  //   this.setState({
-  //     chooseServices: chooseService
-  //   });
-  // };
+  filterChooseServiceByName = text => {
+    let chooseService = this.state.services;
+    chooseService = chooseService.filter(service =>
+      service.name.includes(text)
+    );
+    this.setState({
+      chooseServices: chooseService
+    });
+  };
 
   render() {
     return (
@@ -95,18 +95,19 @@ export default class ScheduleServices extends Component {
           </h3>
         </div>
 
-        <div>
-          <section className="container mt-5">
+        <div className="container form-group mt-5">
+          <div className="input-group">
             <input
-              onChange={this.changeSearch}
+              className="input-field form-control"
               type="text"
               placeholder="Search for your desired service"
               name="searchInput"
-              className="form-control"
+              onChange={this.changeSearch}
             />
-            <i className="fas fa-search float-right" />
-          </section>
+            <button className="fas fa-search fa-lg float-right" type="submit" />
+          </div>
         </div>
+
         <div className="row">
           <div className="servlist col-lg-3 ">
             <div className="form-group">
