@@ -121,7 +121,7 @@ module.exports = function(app) {
     res.json(data);
   });
 
-  //delete
+  //delete user
   app.delete("/api/user/:id", async (req, res) => {
     const id = req.params["id"];
     const data = await userModel.deleteUser(id);

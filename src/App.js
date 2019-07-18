@@ -12,7 +12,7 @@ import Register from "./components/user/Register";
 import Profile from "./components/user/Profile";
 import ScheduleServices from "./components/user/ScheduleServices";
 import Admin from "./components/administrator/Admin";
-import UserManage from "./components/administrator/Manage";
+import UserManage from "./components/administrator/UserManage";
 import AdminCalendar from "./components/administrator/AdminCalendar";
 import Header from "./components/utility/Header";
 import Navbar from "./components/utility/Navbar";
@@ -22,7 +22,6 @@ class App extends Component {
   //check if user is now logged in
   loggedIn = async () => {
     const res = await Axios.get("/api/loggedIn");
-
     return res.data;
   };
 
@@ -52,6 +51,7 @@ class App extends Component {
           />
           <Route exact path="/AdminCalendar" component={AdminCalendar} />
           <Route exact path="/UserManage" render={props => UserManage} />
+          {/* {...props} loggedIn={this.loggedIn} */}
 
           <Route exact path="/BeforeAndAfter" component={BeforeAndAfter} />
           <Route

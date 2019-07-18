@@ -44,17 +44,12 @@ export default class UserManage extends Component {
     const { user, users } = this.state;
     return (
       <div>
-        <nav className="navbar navbar-dark bg-primary fixed-top">
-          <Link to={`/user/${user._id}`}>
-            {" "}
-            <i className="fas fa-chevron-left" />
-          </Link>
-          <span className="navbar-brand mb-0 h1">User Management</span>
-          <button
-            onClick={this.logout}
-            className="float right fas fa-sign-out-alt"
-          />
-        </nav>
+        <Link to={`/user/${user._id}`}> </Link>
+        <span>User Management</span>
+        <button
+          onClick={this.logout}
+          className="float right fas fa-sign-out-alt"
+        />
 
         <div className="container">
           <ul className="list-group">
@@ -72,14 +67,6 @@ export default class UserManage extends Component {
             ))}
           </ul>
         </div>
-
-        <nav className="navbar navbar-dark bg-primary fixed-bottom">
-          <div className="full-width">
-            <Link className="color-white float-right" to={`/user/${user._id}`}>
-              <i className="fas fa-user" />
-            </Link>
-          </div>
-        </nav>
       </div>
     );
   }

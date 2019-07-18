@@ -245,7 +245,7 @@ export default class Register extends Component {
                 id="telephone"
                 name="telephone"
                 required
-                placeholder="Please type your phone number"
+                placeholder="Numbers only please, without dashes"
                 onChange={this.onChange}
               />
             </div>
@@ -272,6 +272,7 @@ export default class Register extends Component {
                 onChange={this.onChange}
               />
             </div>
+
             <div className="client-homeinfo1">
               <label>Total square footage</label>
               <input
@@ -283,13 +284,11 @@ export default class Register extends Component {
                 onChange={this.onChange}
               />
             </div>
-
             {this.state.showUsernameAlert && (
               <div className="alert alert-danger">
                 That username is already in use. Please choose another.
               </div>
             )}
-
             {this.state.showPasswordAlert && (
               <div className="alert alert-danger">
                 The passwords do not match. Please re-enter.
